@@ -5,7 +5,7 @@ description = "A tool to create Nginx configuration files in an OOP manner."
 authors = [
     {name = "Maria Sorokina", email = "ruafelianna@ya.ru"},
 ]
-dependencies = []
+dependencies = ["crossplane==0.5.8"]
 requires-python = ">=3.13"
 readme = "README.md"
 license = {text = "MIT"}
