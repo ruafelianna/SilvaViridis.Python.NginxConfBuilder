@@ -4,6 +4,7 @@ from .OnOff import OnOff
 from .Size import Size
 from .SizeUnit import SizeUnit
 from .TimeInterval import TimeInterval
+from .TimeIntervalGroup import TimeIntervalGroup
 from .TimeIntervalUnit import TimeIntervalUnit
 
 __all__ = [
@@ -13,5 +14,6 @@ __all__ = [
     "Size",
     "SizeUnit",
     "TimeInterval",
+    "TimeIntervalGroup",
     "TimeIntervalUnit",
 ]
