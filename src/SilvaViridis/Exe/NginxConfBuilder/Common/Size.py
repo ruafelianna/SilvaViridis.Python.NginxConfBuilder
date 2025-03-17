@@ -6,6 +6,6 @@ class Size(ValueWithUnit[int, SizeUnit]):
     def __init__(
         self,
         value : int,
-        unit : SizeUnit,
+        unit : SizeUnit = SizeUnit.bytes,
     ):
         super().__init__(value, unit)

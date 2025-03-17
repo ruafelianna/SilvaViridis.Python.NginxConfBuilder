@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import Self, Sequence
 
 from .DirectiveDict import DirectiveDict
@@ -32,6 +32,12 @@ class DirectiveBase(ABC):
         self,
     ) -> Sequence[Self | None]:
         return self._block
+
+    @property
+    @abstractmethod
+    def min_version(
+        self,
+    ) -> tuple[int, int, int]: ...
 
     def change_name(
         self,
