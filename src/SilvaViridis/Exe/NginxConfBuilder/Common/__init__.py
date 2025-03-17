@@ -1,5 +1,7 @@
 from .DirectiveBase import DirectiveBase
 from .DirectiveDict import DirectiveDict
+from .Offset import Offset
+from .OffsetUnit import OffsetUnit
 from .OnOff import OnOff
 from .Size import Size
 from .SizeUnit import SizeUnit
@@ -10,6 +12,8 @@ from .TimeIntervalUnit import TimeIntervalUnit
 __all__ = [
     "DirectiveBase",
     "DirectiveDict",
+    "Offset",
+    "OffsetUnit",
     "OnOff",
     "Size",
     "SizeUnit",
