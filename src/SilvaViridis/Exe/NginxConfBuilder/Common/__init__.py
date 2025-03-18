@@ -1,5 +1,6 @@
 from .DirectiveBase import DirectiveBase
 from .DirectiveDict import DirectiveDict
+from .HttpStatus import HttpStatus
 from .Offset import Offset
 from .OffsetUnit import OffsetUnit
 from .MimeType import MimeType
@@ -15,6 +16,7 @@ from .TimeIntervalUnit import TimeIntervalUnit
 __all__ = [
     "DirectiveBase",
     "DirectiveDict",
+    "HttpStatus",
     "MimeType",
     "MimeTypeExtensions",
     "Offset",
