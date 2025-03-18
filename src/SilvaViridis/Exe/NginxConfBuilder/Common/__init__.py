@@ -1,4 +1,3 @@
-from .BuildArgsHelper import BuildArgsHelper
 from .DirectiveBase import DirectiveBase
 from .DirectiveDict import DirectiveDict
 from .Offset import Offset
@@ -14,7 +13,6 @@ from .TimeIntervalGroup import TimeIntervalGroup
 from .TimeIntervalUnit import TimeIntervalUnit
 
 __all__ = [
-    "BuildArgsHelper",
     "DirectiveBase",
     "DirectiveDict",
     "MimeType",

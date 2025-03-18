@@ -1,18 +1,13 @@
-from ...Common import BuildArgsHelper, DirectiveBase, OnOff
+from .DirectivesList import DIR_CLIENT_BODY_IN_SINGLE_BUFFER
+from ...Common import DirectiveBase, OnOff
 
 class ClientBodyInSingleBuffer(DirectiveBase):
     def __init__(
         self,
         state : OnOff = OnOff.off,
     ):
-        args : list[str] = []
-
-        BuildArgsHelper.add_enum_value(args, state)
-
-        super().__init__(
-            "client_body_in_single_buffer",
-            args,
-        )
+        super().__init__(DIR_CLIENT_BODY_IN_SINGLE_BUFFER)
+        self.add_enum_arg(state)
 
     @property
     def min_version(

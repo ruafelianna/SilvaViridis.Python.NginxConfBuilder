@@ -1,27 +1,23 @@
-from typing import Literal
+from SilvaViridis.Python.Common.Text import StringHelper as SH
 
-from ...Common import BuildArgsHelper, DirectiveBase, OnOff
+from .DirectivesList import DIR_AIO, T_AIO__THREADS, AIO__THREADS
+from ...Common import DirectiveBase, OnOff
 
 class Aio(DirectiveBase):
     def __init__(
         self,
-        state : OnOff | Literal["threads"] = OnOff.off,
+        state : OnOff | T_AIO__THREADS = OnOff.off,
         pool : str | None = None,
     ):
-        args : list[str] = []
+        super().__init__(DIR_AIO)
 
         if isinstance(state, OnOff):
-            BuildArgsHelper.add_enum_value(args, state)
+            self.add_enum_arg(state)
         else:
-            if not BuildArgsHelper.str_empty(pool):
-                BuildArgsHelper.add_str_value(args, f"threads={pool}")
+            if SH.is_not_none_and_not_whitespace(pool):
+                self.add_arg(pool, f"{AIO__THREADS}=")
             else:
-                BuildArgsHelper.add_str_value(args, "threads")
-
-        super().__init__(
-            "aio",
-            args,
-        )
+                self.add_arg(AIO__THREADS)
 
     @property
     def min_version(

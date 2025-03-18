@@ -1,18 +1,13 @@
-from ...Common import BuildArgsHelper, DirectiveBase, OnOff
+from .DirectivesList import DIR_AIO_WRITE
+from ...Common import DirectiveBase, OnOff
 
 class AioWrite(DirectiveBase):
     def __init__(
         self,
         state : OnOff = OnOff.off,
     ):
-        args : list[str] = []
-
-        BuildArgsHelper.add_enum_value(args, state)
-
-        super().__init__(
-            "aio_write",
-            args,
-        )
+        super().__init__(DIR_AIO_WRITE)
+        self.add_enum_arg(state)
 
     @property
     def min_version(

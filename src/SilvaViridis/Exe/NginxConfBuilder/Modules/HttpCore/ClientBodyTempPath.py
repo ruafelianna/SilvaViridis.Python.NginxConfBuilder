@@ -1,6 +1,7 @@
 from typing import Literal, Sequence
 
-from ...Common import BuildArgsHelper, DirectiveBase, Path
+from .DirectivesList import DIR_CLIENT_BODY_TEMP_PATH
+from ...Common import DirectiveBase, Path
 
 class ClientBodyTempPath(DirectiveBase):
     def __init__(
@@ -8,18 +9,13 @@ class ClientBodyTempPath(DirectiveBase):
         path : Path = Path("client_body_temp"),
         levels : Sequence[Literal[1, 2, 3]] | None = None,
     ):
-        args : list[str] = []
+        super().__init__(DIR_CLIENT_BODY_TEMP_PATH)
 
-        BuildArgsHelper.add_path(args, path)
+        self.add_arg(path)
 
         if levels is not None:
             for level in levels:
-                BuildArgsHelper.add_str_value(args, str(level))
-
-        super().__init__(
-            "client_body_temp_path",
-            args,
-        )
+                self.add_arg(level)
 
     @property
     def min_version(

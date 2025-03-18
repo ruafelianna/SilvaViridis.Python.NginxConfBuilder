@@ -1,23 +1,19 @@
 from typing import Literal
 
-from ...Common import BuildArgsHelper, DirectiveBase, OnOff, Size
+from .DirectivesList import DIR_DIRECTIO
+from ...Common import DirectiveBase, OnOff, Size
 
 class Directio(DirectiveBase):
     def __init__(
         self,
         state : Size | Literal[OnOff.off] = OnOff.off,
     ):
-        args : list[str] = []
+        super().__init__(DIR_DIRECTIO)
 
         if isinstance(state, Size):
-            BuildArgsHelper.add_size(args, state)
+            self.add_arg(state)
         else:
-            BuildArgsHelper.add_enum_value(args, state)
-
-        super().__init__(
-            "directio",
-            args,
-        )
+            self.add_enum_arg(state)
 
     @property
     def min_version(

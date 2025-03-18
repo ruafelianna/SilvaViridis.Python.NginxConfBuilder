@@ -1,23 +1,13 @@
-from ...Common import (
-    BuildArgsHelper,
-    DirectiveBase,
-    TimeInterval,
-    TimeIntervalGroup,
-)
+from .DirectivesList import DIR_CLIENT_HEADER_TIMEOUT
+from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
 
 class ClientHeaderTimeout(DirectiveBase):
     def __init__(
         self,
         time : TimeInterval | TimeIntervalGroup = TimeInterval(60),
     ):
-        args : list[str] = []
-
-        BuildArgsHelper.add_time(args, time)
-
-        super().__init__(
-            "client_header_timeout",
-            args,
-        )
+        super().__init__(DIR_CLIENT_HEADER_TIMEOUT)
+        self.add_arg(time)
 
     @property
     def min_version(

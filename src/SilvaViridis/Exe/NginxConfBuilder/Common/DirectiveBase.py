@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Self, Sequence
+from enum import Enum
+from typing import Callable, Self, Sequence
 
 from .DirectiveDict import DirectiveDict
 
@@ -45,12 +46,24 @@ class DirectiveBase(ABC):
     ) -> None:
         self._name = value
 
-    def add_arg(
+    def add_arg[T](
         self,
-        arg : str,
+        value : T | None,
+        prefix : str = "",
+        to_str : Callable[[T], str] | None = None,
     ) -> None:
-        # TODO: should we check that the items are repeated or not?
-        self._args.append(arg)
+        if value is not None:
+            if to_str is None:
+                self._args.append(f"{prefix}{value}")
+            else:
+                self._args.append(f"{prefix}{to_str(value)}")
+
+    def add_enum_arg(
+        self,
+        enum_obj : Enum | None,
+        prefix : str = "",
+    ) -> None:
+        self.add_arg(enum_obj, prefix, lambda o: o.value)
 
     def add_directive(
         self,

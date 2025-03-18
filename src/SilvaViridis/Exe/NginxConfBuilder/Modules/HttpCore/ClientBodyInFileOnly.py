@@ -1,23 +1,22 @@
-from typing import Literal
+from .DirectivesList import (
+    DIR_CLIENT_BODY_IN_FILE_ONLY,
+    T_CLIENT_BODY_IN_FILE_ONLY__CLEAN,
+    CLIENT_BODY_IN_FILE_ONLY__CLEAN
+)
 
-from ...Common import BuildArgsHelper, DirectiveBase, OnOff
+from ...Common import DirectiveBase, OnOff
 
 class ClientBodyInFileOnly(DirectiveBase):
     def __init__(
         self,
-        state : OnOff | Literal["clean"] = OnOff.off,
+        state : OnOff | T_CLIENT_BODY_IN_FILE_ONLY__CLEAN = OnOff.off,
     ):
-        args : list[str] = []
+        super().__init__(DIR_CLIENT_BODY_IN_FILE_ONLY)
 
         if isinstance(state, OnOff):
-            BuildArgsHelper.add_enum_value(args, state)
+            self.add_enum_arg(state)
         else:
-            BuildArgsHelper.add_str_value(args, "clean")
-
-        super().__init__(
-            "client_body_in_file_only",
-            args,
-        )
+            self.add_arg(CLIENT_BODY_IN_FILE_ONLY__CLEAN)
 
     @property
     def min_version(

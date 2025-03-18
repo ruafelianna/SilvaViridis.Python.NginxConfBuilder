@@ -1,18 +1,13 @@
-from ...Common import BuildArgsHelper, DirectiveBase, MimeType
+from .DirectivesList import DIR_DEFAULT_TYPE
+from ...Common import DirectiveBase, MimeType
 
 class DefaultType(DirectiveBase):
     def __init__(
         self,
-        mime : MimeType = MimeType.text__plain,
+        mime_type : MimeType = MimeType.text__plain,
     ):
-        args : list[str] = []
-
-        BuildArgsHelper.add_enum_value(args, mime)
-
-        super().__init__(
-            "default_type",
-            args,
-        )
+        super().__init__(DIR_DEFAULT_TYPE)
+        self.add_enum_arg(mime_type)
 
     @property
     def min_version(

@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:87c879fb35070ac10feb9c70ea2e8551249a69d7bc76573532be882c3dc2abca"
+content_hash = "sha256:b14d63ab56eaeaf110fbdcfe0c9609e11522f9423994fed57fe5f33dfe065c2d"
 
 [[metadata.targets]]
 requires_python = ">=3.13"
@@ -22,11 +22,11 @@ files = [
 
 [[package]]
 name = "silvaviridis-python-common"
-version = "0.4.0"
+version = "0.4.1"
 requires_python = ">=3.13"
-url = "https://github.com/ruafelianna/SilvaViridis.Python.Common/releases/download/v0.4/silvaviridis_python_common-0.4.0-py3-none-any.whl"
+url = "https://github.com/ruafelianna/SilvaViridis.Python.Common/releases/download/v0.4.1/silvaviridis_python_common-0.4.1-py3-none-any.whl"
 summary = "Useful tools for python projects."
 groups = ["default"]
 files = [
-    {file = "silvaviridis_python_common-0.4.0-py3-none-any.whl", hash = "sha256:2a12c2b8c9c5ee134069a15574f26bbaaeaeda353dbd081c2ffcb23bb527ddd3"},
+    {file = "silvaviridis_python_common-0.4.1-py3-none-any.whl", hash = "sha256:066ef768c2fc889feb561d21ca88b8c377c3e5afa1fa5711ee22a1c8a265eb2a"},
 ]

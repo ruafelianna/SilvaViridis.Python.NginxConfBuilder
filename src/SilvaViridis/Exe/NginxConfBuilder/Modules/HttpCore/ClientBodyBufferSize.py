@@ -1,23 +1,13 @@
-from ...Common import (
-    BuildArgsHelper,
-    DirectiveBase,
-    Size,
-    SizeUnit,
-)
+from .DirectivesList import DIR_CLIENT_BODY_BUFFER_SIZE
+from ...Common import DirectiveBase, Size, SizeUnit
 
 class ClientBodyBufferSize(DirectiveBase):
     def __init__(
         self,
         size : Size = Size(16, SizeUnit.kilobytes),
     ):
-        args : list[str] = []
-
-        BuildArgsHelper.add_size(args, size)
-
-        super().__init__(
-            "client_body_buffer_size",
-            args,
-        )
+        super().__init__(DIR_CLIENT_BODY_BUFFER_SIZE)
+        self.add_arg(size)
 
     @property
     def min_version(

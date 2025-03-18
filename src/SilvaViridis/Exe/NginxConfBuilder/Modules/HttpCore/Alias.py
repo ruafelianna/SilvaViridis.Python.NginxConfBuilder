@@ -1,18 +1,13 @@
-from ...Common import BuildArgsHelper, DirectiveBase, Path
+from .DirectivesList import DIR_ALIAS
+from ...Common import DirectiveBase, Path
 
 class Alias(DirectiveBase):
     def __init__(
         self,
         path : Path,
     ):
-        args : list[str] = []
-
-        BuildArgsHelper.add_path(args, path)
-
-        super().__init__(
-            "alias",
-            args,
-        )
+        super().__init__(DIR_ALIAS)
+        self.add_arg(path)
 
     @property
     def min_version(
