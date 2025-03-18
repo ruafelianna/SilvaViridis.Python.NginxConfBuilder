@@ -15,6 +15,15 @@ from .ClientMaxBodySize import ClientMaxBodySize
 from .ConnectionPoolSize import ConnectionPoolSize
 from .DefaultType import DefaultType
 from .Directio import Directio
+from .DirectioAlignment import DirectioAlignment
+from .DisableSymlinks import DisableSymlinks
+from .ErrorPage import ErrorPage
+from .Etag import Etag
+from .IfModifiedSince import IfModifiedSince
+from .IgnoreInvalidHeaders import IgnoreInvalidHeaders
+from .Internal import Internal
+from .KeepaliveDisable import KeepaliveDisable
+from .KeepaliveMinTimeout import KeepaliveMinTimeout
 
 from .DirectivesList import (
     DIR_ABSOLUTE_REDIRECT,
@@ -117,6 +126,15 @@ __all__ = [
     "ConnectionPoolSize",
     "DefaultType",
     "Directio",
+    "DirectioAlignment",
+    "DisableSymlinks",
+    "ErrorPage",
+    "Etag",
+    "IfModifiedSince",
+    "IgnoreInvalidHeaders",
+    "Internal",
+    "KeepaliveDisable",
+    "KeepaliveMinTimeout",
     "DIR_ABSOLUTE_REDIRECT",
     "DIR_AIO",
     "DIR_AIO_WRITE",

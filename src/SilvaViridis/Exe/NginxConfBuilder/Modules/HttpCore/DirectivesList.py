@@ -1,5 +1,7 @@
 from typing import Literal, get_args
 
+from ...Common import OnOff
+
 DIR_ABSOLUTE_REDIRECT = "absolute_redirect"
 DIR_AIO = "aio"
 DIR_AIO_WRITE = "aio_write"
@@ -89,3 +91,9 @@ CLIENT_BODY_IN_FILE_ONLY__CLEAN = get_args(T_CLIENT_BODY_IN_FILE_ONLY__CLEAN)[0]
 
 T_DISABLE_SYMLINKS__IF_NOT_OWNER = Literal["if_not_owner"]
 DISABLE_SYMLINKS__IF_NOT_OWNER = get_args(T_DISABLE_SYMLINKS__IF_NOT_OWNER)[0]
+
+T_IF_MODIFIED_SINCE__STATE = Literal[OnOff.off, "exact", "before"]
+IF_MODIFIED_SINCE__STATE__EXACT = get_args(T_IF_MODIFIED_SINCE__STATE)[1]
+
+T_KEEPALIVE_DISABLE__BROWSER = Literal["msie6", "safari"]
+KEEPALIVE_DISABLE__BROWSER__MSIE6 = get_args(T_KEEPALIVE_DISABLE__BROWSER)[0]
