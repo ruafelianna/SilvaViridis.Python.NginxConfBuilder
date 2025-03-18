@@ -1,17 +1,13 @@
 from enum import Enum
 
+from SilvaViridis.Python.Common.Text import StringHelper as SH
+
 from .Path import Path
 from .Size import Size
 from .TimeInterval import TimeInterval
 from .TimeIntervalGroup import TimeIntervalGroup
 
 class BuildArgsHelper:
-    @staticmethod
-    def str_empty(
-        value : str | None,
-    ) -> bool:
-        return value is None or len(value) == 0 or value.isspace()
-
     @staticmethod
     def add_enum_value(
         args : list[str],
@@ -25,7 +21,7 @@ class BuildArgsHelper:
         args : list[str],
         value : str,
     ) -> None:
-        if not BuildArgsHelper.str_empty(value):
+        if not SH.is_none_or_whitespace(value):
             args.append(value)
 
     @staticmethod

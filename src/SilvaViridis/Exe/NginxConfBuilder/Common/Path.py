@@ -1,11 +1,11 @@
-from .BuildArgsHelper import BuildArgsHelper
+from SilvaViridis.Python.Common.Text import StringHelper as SH
 
 class Path:
     def __init__(
         self,
         value : str,
     ):
-        if BuildArgsHelper.str_empty(value):
+        if SH.is_none_or_whitespace(value):
             ValueError("`path` cannot be empty")
 
         self.value = value
