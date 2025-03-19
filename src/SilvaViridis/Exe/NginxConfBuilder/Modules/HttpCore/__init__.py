@@ -24,6 +24,22 @@ from .IgnoreInvalidHeaders import IgnoreInvalidHeaders
 from .Internal import Internal
 from .KeepaliveDisable import KeepaliveDisable
 from .KeepaliveMinTimeout import KeepaliveMinTimeout
+from .KeepaliveRequests import KeepaliveRequests
+from .KeepaliveTime import KeepaliveTime
+from .KeepaliveTimeout import KeepaliveTimeout
+from .LargeClientHeaderBuffers import LargeClientHeaderBuffers
+from .LimitRate import LimitRate
+from .LimitRateAfter import LimitRateAfter
+from .LingeringClose import LingeringClose
+from .LingeringTime import LingeringTime
+from .LingeringTimeout import LingeringTimeout
+from .LogNotFound import LogNotFound
+from .LogSubrequest import LogSubrequest
+from .MaxRanges import MaxRanges
+from .MergeSlashes import MergeSlashes
+from .MsiePadding import MsiePadding
+from .MsieRefresh import MsieRefresh
+from .OpenFileCache import OpenFileCache
 
 from ._DirectivesList import (
     DIR_ABSOLUTE_REDIRECT,
@@ -135,6 +151,22 @@ __all__ = [
     "Internal",
     "KeepaliveDisable",
     "KeepaliveMinTimeout",
+    "KeepaliveRequests",
+    "KeepaliveTime",
+    "KeepaliveTimeout",
+    "LargeClientHeaderBuffers",
+    "LimitRate",
+    "LimitRateAfter",
+    "LingeringClose",
+    "LingeringTime",
+    "LingeringTimeout",
+    "LogNotFound",
+    "LogSubrequest",
+    "MaxRanges",
+    "MergeSlashes",
+    "MsiePadding",
+    "MsieRefresh",
+    "OpenFileCache",
     "DIR_ABSOLUTE_REDIRECT",
     "DIR_AIO",
     "DIR_AIO_WRITE",
