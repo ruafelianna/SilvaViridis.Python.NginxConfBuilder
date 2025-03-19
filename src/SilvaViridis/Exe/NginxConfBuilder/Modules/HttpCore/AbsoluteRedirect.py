@@ -7,7 +7,7 @@ class AbsoluteRedirect(DirectiveBase):
         state : OnOff = OnOff.on,
     ):
         super().__init__(DIR_ABSOLUTE_REDIRECT)
-        self.add_enum_arg(state)
+        self.add_arg(state)
 
     @property
     def min_version(

@@ -7,10 +7,4 @@ class IgnoreInvalidHeaders(DirectiveBase):
         state : OnOff = OnOff.on,
     ):
         super().__init__(DIR_IGNORE_INVALID_HEADERS)
-        self.add_enum_arg(state)
-
-    @property
-    def min_version(
-        self,
-    ) -> tuple[int, int, int]:
-        return (0, 0, 0)
+        self.add_arg(state)

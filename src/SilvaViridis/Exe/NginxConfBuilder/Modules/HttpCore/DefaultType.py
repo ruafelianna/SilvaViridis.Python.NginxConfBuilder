@@ -9,10 +9,4 @@ class DefaultType(DirectiveBase):
         mime_type : MimeType = MimeType.text__plain,
     ):
         super().__init__(DIR_DEFAULT_TYPE)
-        self.add_enum_arg(mime_type)
-
-    @property
-    def min_version(
-        self,
-    ) -> tuple[int, int, int]:
-        return (0, 0, 0)
+        self.add_arg(mime_type)

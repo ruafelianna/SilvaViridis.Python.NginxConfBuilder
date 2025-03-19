@@ -9,11 +9,7 @@ class Directio(DirectiveBase):
         state : Size | Literal[OnOff.off] = OnOff.off,
     ):
         super().__init__(DIR_DIRECTIO)
-
-        if isinstance(state, Size):
-            self.add_arg(state)
-        else:
-            self.add_enum_arg(state)
+        self.add_arg(state)
 
     @property
     def min_version(

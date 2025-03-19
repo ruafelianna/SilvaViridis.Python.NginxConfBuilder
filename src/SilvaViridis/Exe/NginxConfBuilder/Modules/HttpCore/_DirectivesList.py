@@ -1,7 +1,3 @@
-from typing import Literal, get_args
-
-from ...Common import OnOff
-
 DIR_ABSOLUTE_REDIRECT = "absolute_redirect"
 DIR_AIO = "aio"
 DIR_AIO_WRITE = "aio_write"
@@ -82,18 +78,3 @@ DIR_TYPES_HASH_MAX_SIZE = "types_hash_max_size"
 DIR_UNDERSCORES_IN_HEADERS = "underscores_in_headers"
 DIR_VARIABLES_HASH_BUCKET_SIZE = "variables_hash_bucket_size"
 DIR_VARIABLES_HASH_MAX_SIZE = "variables_hash_max_size"
-
-T_AIO__THREADS = Literal["threads"]
-AIO__THREADS = get_args(T_AIO__THREADS)[0]
-
-T_CLIENT_BODY_IN_FILE_ONLY__CLEAN = Literal["clean"]
-CLIENT_BODY_IN_FILE_ONLY__CLEAN = get_args(T_CLIENT_BODY_IN_FILE_ONLY__CLEAN)[0]
-
-T_DISABLE_SYMLINKS__IF_NOT_OWNER = Literal["if_not_owner"]
-DISABLE_SYMLINKS__IF_NOT_OWNER = get_args(T_DISABLE_SYMLINKS__IF_NOT_OWNER)[0]
-
-T_IF_MODIFIED_SINCE__STATE = Literal[OnOff.off, "exact", "before"]
-IF_MODIFIED_SINCE__STATE__EXACT = get_args(T_IF_MODIFIED_SINCE__STATE)[1]
-
-T_KEEPALIVE_DISABLE__BROWSER = Literal["msie6", "safari"]
-KEEPALIVE_DISABLE__BROWSER__MSIE6 = get_args(T_KEEPALIVE_DISABLE__BROWSER)[0]

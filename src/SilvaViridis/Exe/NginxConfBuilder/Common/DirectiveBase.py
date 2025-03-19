@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from enum import Enum
 from typing import Callable, Self, Sequence
 
@@ -35,10 +35,10 @@ class DirectiveBase(ABC):
         return self._block
 
     @property
-    @abstractmethod
     def min_version(
         self,
-    ) -> tuple[int, int, int]: ...
+    ) -> tuple[int, int, int]:
+        return (0, 0, 0)
 
     def change_name(
         self,
@@ -53,17 +53,17 @@ class DirectiveBase(ABC):
         to_str : Callable[[T], str] | None = None,
     ) -> None:
         if value is not None:
-            if to_str is None:
-                self._args.append(f"{prefix}{value}")
-            else:
-                self._args.append(f"{prefix}{to_str(value)}")
+            result : str
 
-    def add_enum_arg(
-        self,
-        enum_obj : Enum | None,
-        prefix : str = "",
-    ) -> None:
-        self.add_arg(enum_obj, prefix, lambda o: o.value)
+            if to_str is None:
+                if isinstance(value, Enum):
+                    result = DirectiveBase._to_str__enum(value)
+                else:
+                    result = str(value)
+            else:
+                result = to_str(value)
+
+            self._args.append(f"{prefix}{result}")
 
     def add_directive(
         self,
@@ -85,3 +85,9 @@ class DirectiveBase(ABC):
             result["block"] = [b.build() for b in self.block if b]
 
         return result
+
+    @staticmethod
+    def _to_str__enum(
+        obj : Enum,
+    ) -> str:
+        return obj.value

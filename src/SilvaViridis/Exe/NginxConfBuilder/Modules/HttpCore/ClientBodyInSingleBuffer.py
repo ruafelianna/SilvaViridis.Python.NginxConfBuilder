@@ -7,10 +7,4 @@ class ClientBodyInSingleBuffer(DirectiveBase):
         state : OnOff = OnOff.off,
     ):
         super().__init__(DIR_CLIENT_BODY_IN_SINGLE_BUFFER)
-        self.add_enum_arg(state)
-
-    @property
-    def min_version(
-        self,
-    ) -> tuple[int, int, int]:
-        return (0, 0, 0)
+        self.add_arg(state)

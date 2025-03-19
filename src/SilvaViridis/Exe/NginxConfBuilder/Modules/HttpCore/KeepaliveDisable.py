@@ -1,12 +1,13 @@
-from typing import Sequence
+from annotated_types import MinLen
+from typing import Annotated, Literal, Sequence
 
-from ._DirectivesList import DIR_KEEPALIVE_DISABLE, T_KEEPALIVE_DISABLE__BROWSER, KEEPALIVE_DISABLE__BROWSER__MSIE6
+from ._DirectivesList import DIR_KEEPALIVE_DISABLE
 from ...Common import DirectiveBase
 
 class KeepaliveDisable(DirectiveBase):
     def __init__(
         self,
-        browsers : Sequence[T_KEEPALIVE_DISABLE__BROWSER] | None = [KEEPALIVE_DISABLE__BROWSER__MSIE6],
+        browsers : Annotated[Sequence[Literal["msie6", "safari"]], MinLen(1)] | None = ["msie6"],
     ):
         super().__init__(DIR_KEEPALIVE_DISABLE)
 
@@ -15,9 +16,3 @@ class KeepaliveDisable(DirectiveBase):
         else:
             for browser in browsers:
                 self.add_arg(browser)
-
-    @property
-    def min_version(
-        self,
-    ) -> tuple[int, int, int]:
-        return (0, 0, 0)

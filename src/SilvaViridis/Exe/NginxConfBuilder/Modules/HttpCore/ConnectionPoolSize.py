@@ -8,9 +8,3 @@ class ConnectionPoolSize(DirectiveBase):
     ):
         super().__init__(DIR_CONNECTION_POOL_SIZE)
         self.add_arg(size)
-
-    @property
-    def min_version(
-        self,
-    ) -> tuple[int, int, int]:
-        return (0, 0, 0)

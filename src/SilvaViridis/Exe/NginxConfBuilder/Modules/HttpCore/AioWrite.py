@@ -7,7 +7,7 @@ class AioWrite(DirectiveBase):
         state : OnOff = OnOff.off,
     ):
         super().__init__(DIR_AIO_WRITE)
-        self.add_enum_arg(state)
+        self.add_arg(state)
 
     @property
     def min_version(

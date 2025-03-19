@@ -9,6 +9,7 @@ from .SizeUnit import SizeUnit
 from .TimeInterval import TimeInterval
 from .TimeIntervalGroup import TimeIntervalGroup
 from .TimeIntervalUnit import TimeIntervalUnit
+from .Variable import Variable
 
 __all__ = [
     "DirectiveBase",
@@ -22,4 +23,5 @@ __all__ = [
     "TimeInterval",
     "TimeIntervalGroup",
     "TimeIntervalUnit",
+    "Variable",
 ]
