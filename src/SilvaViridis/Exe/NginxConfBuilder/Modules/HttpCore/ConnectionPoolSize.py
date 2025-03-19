@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_CONNECTION_POOL_SIZE
+from ._DirectivesList import DIR_CONNECTION_POOL_SIZE
 from ...Common import DirectiveBase, Size
 
 class ConnectionPoolSize(DirectiveBase):

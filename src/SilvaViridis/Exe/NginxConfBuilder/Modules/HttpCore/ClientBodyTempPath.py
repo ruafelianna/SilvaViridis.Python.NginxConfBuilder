@@ -1,6 +1,6 @@
 from typing import Literal, Sequence
 
-from .DirectivesList import DIR_CLIENT_BODY_TEMP_PATH
+from ._DirectivesList import DIR_CLIENT_BODY_TEMP_PATH
 from ...Common import DirectiveBase, Path
 
 class ClientBodyTempPath(DirectiveBase):

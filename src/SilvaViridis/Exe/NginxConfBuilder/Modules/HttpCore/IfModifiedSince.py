@@ -1,4 +1,4 @@
-from .DirectivesList import (
+from ._DirectivesList import (
     DIR_IF_MODIFIED_SINCE,
     T_IF_MODIFIED_SINCE__STATE,
     IF_MODIFIED_SINCE__STATE__EXACT,

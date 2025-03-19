@@ -1,6 +1,6 @@
 from typing import Sequence
 
-from .DirectivesList import DIR_KEEPALIVE_DISABLE, T_KEEPALIVE_DISABLE__BROWSER, KEEPALIVE_DISABLE__BROWSER__MSIE6
+from ._DirectivesList import DIR_KEEPALIVE_DISABLE, T_KEEPALIVE_DISABLE__BROWSER, KEEPALIVE_DISABLE__BROWSER__MSIE6
 from ...Common import DirectiveBase
 
 class KeepaliveDisable(DirectiveBase):

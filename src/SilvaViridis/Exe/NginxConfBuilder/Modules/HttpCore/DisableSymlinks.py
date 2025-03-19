@@ -1,4 +1,4 @@
-from .DirectivesList import (
+from ._DirectivesList import (
     DIR_DISABLE_SYMLINKS,
     T_DISABLE_SYMLINKS__IF_NOT_OWNER,
     DISABLE_SYMLINKS__IF_NOT_OWNER,

@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_AUTH_DELAY
+from ._DirectivesList import DIR_AUTH_DELAY
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
 
 class AuthDelay(DirectiveBase):

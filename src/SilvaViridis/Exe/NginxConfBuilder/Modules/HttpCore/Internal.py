@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_INTERNAL
+from ._DirectivesList import DIR_INTERNAL
 from ...Common import DirectiveBase
 
 class Internal(DirectiveBase):

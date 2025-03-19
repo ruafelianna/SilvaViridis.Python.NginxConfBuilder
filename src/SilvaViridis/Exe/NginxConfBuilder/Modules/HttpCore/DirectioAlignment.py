@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_DIRECTIO_ALIGNMENT
+from ._DirectivesList import DIR_DIRECTIO_ALIGNMENT
 from ...Common import DirectiveBase, Size
 
 class DirectioAlignment(DirectiveBase):

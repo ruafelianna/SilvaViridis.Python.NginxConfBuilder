@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_CLIENT_BODY_TIMEOUT
+from ._DirectivesList import DIR_CLIENT_BODY_TIMEOUT
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
 
 class ClientBodyTimeout(DirectiveBase):

@@ -1,6 +1,6 @@
 from SilvaViridis.Python.Common.Text import StringHelper as SH
 
-from .DirectivesList import DIR_AIO, T_AIO__THREADS, AIO__THREADS
+from ._DirectivesList import DIR_AIO, T_AIO__THREADS, AIO__THREADS
 from ...Common import DirectiveBase, OnOff
 
 class Aio(DirectiveBase):

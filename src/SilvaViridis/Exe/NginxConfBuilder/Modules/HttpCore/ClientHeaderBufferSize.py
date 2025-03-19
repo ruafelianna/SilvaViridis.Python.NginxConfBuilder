@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_CLIENT_HEADER_BUFFER_SIZE
+from ._DirectivesList import DIR_CLIENT_HEADER_BUFFER_SIZE
 from ...Common import DirectiveBase, Size, SizeUnit
 
 class ClientHeaderBufferSize(DirectiveBase):

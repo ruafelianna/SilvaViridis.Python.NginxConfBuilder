@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_ALIAS
+from ._DirectivesList import DIR_ALIAS
 from ...Common import DirectiveBase, Path
 
 class Alias(DirectiveBase):

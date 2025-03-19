@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_KEEPALIVE_MIN_TIMEOUT
+from ._DirectivesList import DIR_KEEPALIVE_MIN_TIMEOUT
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
 
 class KeepaliveMinTimeout(DirectiveBase):

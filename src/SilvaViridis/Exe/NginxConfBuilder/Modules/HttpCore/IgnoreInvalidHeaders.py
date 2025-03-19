@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_IGNORE_INVALID_HEADERS
+from ._DirectivesList import DIR_IGNORE_INVALID_HEADERS
 from ...Common import DirectiveBase, OnOff
 
 class IgnoreInvalidHeaders(DirectiveBase):

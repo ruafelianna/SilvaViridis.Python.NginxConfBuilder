@@ -1,4 +1,4 @@
-from .DirectivesList import (
+from ._DirectivesList import (
     DIR_CLIENT_BODY_IN_FILE_ONLY,
     T_CLIENT_BODY_IN_FILE_ONLY__CLEAN,
     CLIENT_BODY_IN_FILE_ONLY__CLEAN

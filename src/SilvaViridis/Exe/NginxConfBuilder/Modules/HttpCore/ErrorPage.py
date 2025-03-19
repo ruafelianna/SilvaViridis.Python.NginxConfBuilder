@@ -1,7 +1,9 @@
 from typing import Literal, Sequence
 
-from .DirectivesList import DIR_ERROR_PAGE
-from ...Common import DirectiveBase, HttpStatus, Path
+from SilvaViridis.Python.Common.Web import HttpStatus
+
+from ._DirectivesList import DIR_ERROR_PAGE
+from ...Common import DirectiveBase, Path
 
 class ErrorPage(DirectiveBase):
     def __init__(

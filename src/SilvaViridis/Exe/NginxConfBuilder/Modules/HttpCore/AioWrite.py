@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_AIO_WRITE
+from ._DirectivesList import DIR_AIO_WRITE
 from ...Common import DirectiveBase, OnOff
 
 class AioWrite(DirectiveBase):

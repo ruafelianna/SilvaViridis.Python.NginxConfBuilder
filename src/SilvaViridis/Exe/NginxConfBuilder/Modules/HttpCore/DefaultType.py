@@ -1,5 +1,7 @@
-from .DirectivesList import DIR_DEFAULT_TYPE
-from ...Common import DirectiveBase, MimeType
+from SilvaViridis.Python.Common.Web import MimeType
+
+from ._DirectivesList import DIR_DEFAULT_TYPE
+from ...Common import DirectiveBase
 
 class DefaultType(DirectiveBase):
     def __init__(

@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_CHUNKED_TRANSFER_ENCODING
+from ._DirectivesList import DIR_CHUNKED_TRANSFER_ENCODING
 from ...Common import DirectiveBase, OnOff
 
 class ChunkedTransferEncoding(DirectiveBase):

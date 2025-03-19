@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_ETAG
+from ._DirectivesList import DIR_ETAG
 from ...Common import DirectiveBase, OnOff
 
 class Etag(DirectiveBase):

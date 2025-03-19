@@ -25,7 +25,7 @@ from .Internal import Internal
 from .KeepaliveDisable import KeepaliveDisable
 from .KeepaliveMinTimeout import KeepaliveMinTimeout
 
-from .DirectivesList import (
+from ._DirectivesList import (
     DIR_ABSOLUTE_REDIRECT,
     DIR_AIO,
     DIR_AIO_WRITE,

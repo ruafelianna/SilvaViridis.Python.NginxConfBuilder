@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_ABSOLUTE_REDIRECT
+from ._DirectivesList import DIR_ABSOLUTE_REDIRECT
 from ...Common import DirectiveBase, OnOff
 
 class AbsoluteRedirect(DirectiveBase):

@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_CLIENT_BODY_IN_SINGLE_BUFFER
+from ._DirectivesList import DIR_CLIENT_BODY_IN_SINGLE_BUFFER
 from ...Common import DirectiveBase, OnOff
 
 class ClientBodyInSingleBuffer(DirectiveBase):

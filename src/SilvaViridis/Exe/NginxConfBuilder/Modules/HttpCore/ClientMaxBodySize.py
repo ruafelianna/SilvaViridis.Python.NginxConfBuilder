@@ -1,4 +1,4 @@
-from .DirectivesList import DIR_CLIENT_MAX_BODY_SIZE
+from ._DirectivesList import DIR_CLIENT_MAX_BODY_SIZE
 from ...Common import DirectiveBase, Size, SizeUnit
 
 class ClientMaxBodySize(DirectiveBase):

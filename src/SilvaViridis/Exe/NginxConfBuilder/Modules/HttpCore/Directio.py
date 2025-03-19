@@ -1,6 +1,6 @@
 from typing import Literal
 
-from .DirectivesList import DIR_DIRECTIO
+from ._DirectivesList import DIR_DIRECTIO
 from ...Common import DirectiveBase, OnOff, Size
 
 class Directio(DirectiveBase):
