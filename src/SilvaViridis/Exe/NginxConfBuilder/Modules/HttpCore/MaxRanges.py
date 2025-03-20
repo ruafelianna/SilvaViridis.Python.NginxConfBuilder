@@ -7,11 +7,7 @@ class MaxRanges(DirectiveBase):
         quantity : PositiveInt | None = None,
     ):
         super().__init__(DIR_MAX_RANGES)
-
-        if quantity is None:
-            self.add_arg(0)
-        else:
-            self.add_arg(quantity)
+        self.add_arg(0 if quantity is None else quantity)
 
     @property
     def min_version(

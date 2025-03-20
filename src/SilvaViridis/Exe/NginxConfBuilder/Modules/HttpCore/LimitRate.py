@@ -7,8 +7,4 @@ class LimitRate(DirectiveBase):
         bps : PositiveInt | Variable | None = None,
     ):
         super().__init__(DIR_LIMIT_RATE)
-
-        if bps is None:
-            self.add_arg(0)
-        else:
-            self.add_arg(bps)
+        self.add_arg(0 if bps is None else bps)
