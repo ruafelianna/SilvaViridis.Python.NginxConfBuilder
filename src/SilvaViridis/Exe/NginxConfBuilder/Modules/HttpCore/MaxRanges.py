@@ -1,13 +1,10 @@
-from annotated_types import Gt
-from typing import Annotated
-
 from ._DirectivesList import DIR_MAX_RANGES
-from ...Common import DirectiveBase
+from ...Common import DirectiveBase, PositiveInt
 
 class MaxRanges(DirectiveBase):
     def __init__(
         self,
-        quantity : Annotated[int, Gt(0)] | None = None,
+        quantity : PositiveInt | None = None,
     ):
         super().__init__(DIR_MAX_RANGES)
 

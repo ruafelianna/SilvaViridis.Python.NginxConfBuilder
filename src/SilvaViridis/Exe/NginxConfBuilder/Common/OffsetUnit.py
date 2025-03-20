@@ -11,11 +11,11 @@ class OffsetUnit(OrderedEnum):
     megabytes = "m"
     gigabytes = "g"
 
-order : dict[OffsetUnit, IComparable] = {
+_order : dict[OffsetUnit, IComparable] = {
     OffsetUnit.bytes: 0,
     OffsetUnit.kilobytes: 1,
     OffsetUnit.megabytes: 2,
     OffsetUnit.gigabytes: 3,
 }
 
-OrderedEnumDictComparator(order)(OffsetUnit)
+OrderedEnumDictComparator(_order)(OffsetUnit)

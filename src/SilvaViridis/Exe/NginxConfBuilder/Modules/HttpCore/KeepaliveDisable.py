@@ -1,13 +1,14 @@
-from annotated_types import MinLen
 from typing import Annotated, Literal, Sequence
 
 from ._DirectivesList import DIR_KEEPALIVE_DISABLE
-from ...Common import DirectiveBase
+from ...Common import DirectiveBase, NonEmptySequenceValidator
+
+BrowserList = Annotated[Sequence[Literal["msie6", "safari"]], NonEmptySequenceValidator]
 
 class KeepaliveDisable(DirectiveBase):
     def __init__(
         self,
-        browsers : Annotated[Sequence[Literal["msie6", "safari"]], MinLen(1)] | None = ["msie6"],
+        browsers : BrowserList | None = ["msie6"],
     ):
         super().__init__(DIR_KEEPALIVE_DISABLE)
 

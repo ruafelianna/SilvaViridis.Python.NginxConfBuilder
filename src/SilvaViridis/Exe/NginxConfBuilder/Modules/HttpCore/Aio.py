@@ -16,7 +16,7 @@ class Aio(DirectiveBase):
             self.add_arg(state)
         else:
             if pool is not None:
-                self.add_arg(pool, "threads=")
+                self.add_arg(pool, "threads=", lambda p: p.name)
             else:
                 self.add_arg("threads")
 

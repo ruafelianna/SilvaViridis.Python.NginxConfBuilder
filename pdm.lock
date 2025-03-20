@@ -5,23 +5,20 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:cdbe281104a2f8afb57003b013ee89ed2d9b5070a76544610cc16abba6c7c580"
+content_hash = "sha256:3efab3e614e12237243ca4815ef9aebfc120c1062773a0628cc980f41c84870c"
 
 [[metadata.targets]]
 requires_python = ">=3.13"
 
 [[package]]
-name = "annotated-types"
-version = "0.7.0"
-requires_python = ">=3.8"
-summary = "Reusable constraint types to use with typing.Annotated"
+name = "beartype"
+version = "0.20.0"
+requires_python = ">=3.9"
+summary = "Unbearably fast near-real-time hybrid runtime-static type-checking in pure Python."
 groups = ["default"]
-dependencies = [
-    "typing-extensions>=4.0.0; python_version < \"3.9\"",
-]
 files = [
-    {file = "annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"},
-    {file = "annotated_types-0.7.0.tar.gz", hash = "sha256:aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"},
+    {file = "beartype-0.20.0-py3-none-any.whl", hash = "sha256:090d10e3540b3fca209a0ab5f1c15f9652a075da0a7249c2e6713011e9e5f6ef"},
+    {file = "beartype-0.20.0.tar.gz", hash = "sha256:599ecc86b88549bcb6d1af626f44d85ffbb9151ace5d7f9f3b493dce2ffee529"},
 ]
 
 [[package]]
@@ -42,5 +39,5 @@ url = "https://github.com/ruafelianna/SilvaViridis.Python.Common/releases/downlo
 summary = "Useful tools for python projects."
 groups = ["default"]
 files = [
-    {file = "silvaviridis_python_common-0.5.1-py3-none-any.whl", hash = "sha256:3a39780791fd65d6f925f99ea230155ba95210ec5ee429a516e06178c36e0347"},
+    {file = "silvaviridis_python_common-0.5.1-py3-none-any.whl", hash = "sha256:817218edd84601e316c52eccbe985851eb444a62a4b6fe9cf318525bad7733fa"},
 ]

@@ -10,10 +10,10 @@ class SizeUnit(OrderedEnum):
     kilobytes = "k"
     megabytes = "m"
 
-order : dict[SizeUnit, IComparable] = {
+_order : dict[SizeUnit, IComparable] = {
     SizeUnit.bytes: 0,
     SizeUnit.kilobytes: 1,
     SizeUnit.megabytes: 2,
 }
 
-OrderedEnumDictComparator(order)(SizeUnit)
+OrderedEnumDictComparator(_order)(SizeUnit)

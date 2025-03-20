@@ -1,21 +1,23 @@
-from annotated_types import Gt, Le
+from beartype.vale import Is
 from typing import Annotated
 
-from SilvaViridis.Python.Common.Text import StringHelper as SH
-
 from ._DirectivesList import DIR_THREAD_POOL
-from ...Common import DirectiveBase
+from ...Common import DirectiveBase, NonEmptyString, PositiveInt
+
+def _is_less_than_2_16(
+    value : PositiveInt,
+) -> bool:
+    return value <= 2**16
+
+PositiveInt2BytesPlusOne = Annotated[PositiveInt, Is[_is_less_than_2_16]]
 
 class ThreadPool(DirectiveBase):
     def __init__(
         self,
-        name : str = "default",
-        threads : Annotated[int, Gt(0)] = 32,
-        max_queue : Annotated[int, Gt(0), Le(2**16)] | None = 2**16,
+        name : NonEmptyString = "default",
+        threads : PositiveInt = 32,
+        max_queue : PositiveInt2BytesPlusOne | None = 2**16,
     ):
-        if SH.is_none_or_whitespace(name):
-            raise ValueError("`name` cannot be empty")
-
         super().__init__(DIR_THREAD_POOL)
         self.add_arg(name)
         self.add_arg(threads, "threads=")

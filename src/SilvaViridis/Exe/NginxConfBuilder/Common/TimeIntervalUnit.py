@@ -15,7 +15,7 @@ class TimeIntervalUnit(OrderedEnum):
     months = "M" # 30 days
     years = "y" # 365 days
 
-order : dict[TimeIntervalUnit, IComparable] = {
+_order : dict[TimeIntervalUnit, IComparable] = {
     TimeIntervalUnit.milliseconds: 0,
     TimeIntervalUnit.seconds: 1,
     TimeIntervalUnit.minutes: 2,
@@ -26,4 +26,4 @@ order : dict[TimeIntervalUnit, IComparable] = {
     TimeIntervalUnit.years: 7,
 }
 
-OrderedEnumDictComparator(order)(TimeIntervalUnit)
+OrderedEnumDictComparator(_order)(TimeIntervalUnit)

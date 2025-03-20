@@ -1,20 +1,25 @@
-from abc import ABC
-from enum import Enum
-from typing import Callable, Self, Sequence
+from __future__ import annotations
 
+from abc import ABC
+from beartype import beartype
+from enum import Enum
+from typing import Callable, Sequence
+
+from ._ValidatorsList import NonEmptyString
 from .DirectiveDict import DirectiveDict
 
+@beartype
 class DirectiveBase(ABC):
     def __init__(
         self,
-        name : str,
-        args : Sequence[str] = [],
-        block : Sequence[Self | None] = [],
+        name : NonEmptyString,
+        args : Sequence[NonEmptyString] = [],
+        block : Sequence[DirectiveBase | None] = [],
     ):
         self._name : str
         self.change_name(name)
         self._args : list[str] = list(args)
-        self._block : list[Self | None] = list(block)
+        self._block : list[DirectiveBase | None] = list(block)
 
     @property
     def name(
@@ -31,7 +36,7 @@ class DirectiveBase(ABC):
     @property
     def block(
         self,
-    ) -> Sequence[Self | None]:
+    ) -> Sequence[DirectiveBase | None]:
         return self._block
 
     @property
@@ -42,7 +47,7 @@ class DirectiveBase(ABC):
 
     def change_name(
         self,
-        value : str,
+        value : NonEmptyString,
     ) -> None:
         self._name = value
 
@@ -67,7 +72,7 @@ class DirectiveBase(ABC):
 
     def add_directive(
         self,
-        directive : Self,
+        directive : DirectiveBase,
     ) -> None:
         if directive == self:
             raise ValueError("Cannot add itself to the list of directives to prevent cyclic references. Please, make a copy of an object.")
@@ -90,4 +95,4 @@ class DirectiveBase(ABC):
     def _to_str__enum(
         obj : Enum,
     ) -> str:
-        return obj.value
+        return str(obj.value)

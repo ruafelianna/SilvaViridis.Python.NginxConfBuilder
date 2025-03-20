@@ -1,5 +1,6 @@
 from typing import Sequence
 
+from ._ValidatorsList import NonNegativeInt
 from .TimeInterval import TimeInterval
 from .TimeIntervalUnit import TimeIntervalUnit
 
@@ -8,7 +9,7 @@ class TimeIntervalGroup:
         self,
         intervals : Sequence[TimeInterval] = [],
     ):
-        grouped : dict[TimeIntervalUnit, list[int]] = {}
+        grouped : dict[TimeIntervalUnit, list[NonNegativeInt]] = {}
 
         for interval in intervals:
             if not interval.unit in grouped:

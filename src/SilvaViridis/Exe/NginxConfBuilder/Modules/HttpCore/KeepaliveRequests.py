@@ -1,13 +1,10 @@
-from annotated_types import Gt
-from typing import Annotated
-
 from ._DirectivesList import DIR_KEEPALIVE_REQUESTS
-from ...Common import DirectiveBase
+from ...Common import DirectiveBase, PositiveInt
 
 class KeepaliveRequests(DirectiveBase):
     def __init__(
         self,
-        quantity : Annotated[int, Gt(0)] = 1000,
+        quantity : PositiveInt = 1000,
     ):
         super().__init__(DIR_KEEPALIVE_REQUESTS)
         self.add_arg(quantity)

@@ -1,7 +1,9 @@
+from ._ValidatorsList import NonEmptyString
+
 class Variable:
     def __init__(
         self,
-        name : str,
+        name : NonEmptyString,
     ):
         self._name = name
 
