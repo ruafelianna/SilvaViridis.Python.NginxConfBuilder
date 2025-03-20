@@ -16,6 +16,7 @@ from ._ValidatorsList import (
     NonEmptyString,
     NonNegativeInt,
     PositiveInt,
+    PositiveSize,
 )
 
 __all__ = [
@@ -36,4 +37,5 @@ __all__ = [
     "NonEmptyString",
     "NonNegativeInt",
     "PositiveInt",
+    "PositiveSize",
 ]
