@@ -1,5 +1,5 @@
-from SilvaViridis.Exe.NginxConfBuilder.Common.Validators import NonEmptyString
 from ....Common import Variable
+from ....Common.Validators import NonEmptyString
 
 class SentTrailerVariable(Variable):
     def __init__(
