@@ -5,7 +5,7 @@ description = "A tool to create Nginx configuration files in an OOP manner."
 authors = [
     {name = "Maria Sorokina", email = "ruafelianna@ya.ru"},
 ]
-dependencies = ["crossplane==0.5.8", "silvaviridis-python-common @ https://github.com/ruafelianna/SilvaViridis.Python.Common/releases/download/v0.5.1/silvaviridis_python_common-0.5.1-py3-none-any.whl", "beartype>=0.20.0"]
+dependencies = ["crossplane==0.5.8", "silvaviridis-python-common @ https://github.com/ruafelianna/SilvaViridis.Python.Common/releases/download/v0.6.0/silvaviridis_python_common-0.6.0-py3-none-any.whl", "beartype>=0.20.0"]
 requires-python = ">=3.13"
 readme = "README.md"
 license = {text = "MIT"}
