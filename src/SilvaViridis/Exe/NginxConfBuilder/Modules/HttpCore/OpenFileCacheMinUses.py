@@ -1,5 +1,6 @@
 from ._DirectivesList import DIR_OPEN_FILE_CACHE_MIN_USES
-from ...Common import DirectiveBase, PositiveInt
+from ...Common import DirectiveBase
+from ...Common.Validators import PositiveInt
 
 class OpenFileCacheMinUses(DirectiveBase):
     def __init__(

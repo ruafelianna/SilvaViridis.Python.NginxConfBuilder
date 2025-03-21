@@ -3,7 +3,8 @@ from typing import Annotated, Literal, Sequence
 from SilvaViridis.Python.Common.Web import HttpStatus
 
 from ._DirectivesList import DIR_ERROR_PAGE
-from ...Common import DirectiveBase, NonEmptySequenceValidator, Path
+from ...Common import DirectiveBase, Path
+from ...Common.Validators import NonEmptySequenceValidator
 
 HttpStatusList = Annotated[Sequence[HttpStatus], NonEmptySequenceValidator]
 

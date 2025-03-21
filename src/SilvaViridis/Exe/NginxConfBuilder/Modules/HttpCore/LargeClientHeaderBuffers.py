@@ -1,5 +1,6 @@
 from ._DirectivesList import DIR_LARGE_CLIENT_HEADER_BUFFERS
-from ...Common import DirectiveBase, PositiveInt, Size, SizeUnit
+from ...Common import DirectiveBase, Size, SizeUnit
+from ...Common.Validators import PositiveInt
 
 class LargeClientHeaderBuffers(DirectiveBase):
     def __init__(

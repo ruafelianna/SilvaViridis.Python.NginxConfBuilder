@@ -1,7 +1,8 @@
 from typing import Literal
 
 from ._DirectivesList import DIR_OPEN_FILE_CACHE
-from ...Common import DirectiveBase, OnOff, PositiveInt, TimeInterval, TimeIntervalGroup
+from ...Common import DirectiveBase, OnOff, TimeInterval, TimeIntervalGroup
+from ...Common.Validators import PositiveInt
 
 class OpenFileCache(DirectiveBase):
     def __init__(

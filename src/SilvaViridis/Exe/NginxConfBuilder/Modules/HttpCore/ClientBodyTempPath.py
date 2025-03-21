@@ -2,7 +2,8 @@ from beartype.vale import Is
 from typing import Annotated, Sequence, Literal
 
 from ._DirectivesList import DIR_CLIENT_BODY_TEMP_PATH
-from ...Common import DirectiveBase, NonEmptySequenceValidator, Path
+from ...Common import DirectiveBase, Path
+from ...Common.Validators import NonEmptySequenceValidator
 
 Seq123 = Sequence[Literal[1, 2, 3]]
 

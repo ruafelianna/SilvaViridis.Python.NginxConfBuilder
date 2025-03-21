@@ -8,8 +8,8 @@ from typing import Callable, Sequence
 from SilvaViridis.Python.Common.Enums import OrderedEnum
 from SilvaViridis.Python.Common.Web import HttpStatus, MimeType
 
-from ._ValidatorsList import NonEmptyString
 from .DirectiveDict import DirectiveDict
+from .Validators import NonEmptyString
 
 @beartype
 class DirectiveBase(ABC):

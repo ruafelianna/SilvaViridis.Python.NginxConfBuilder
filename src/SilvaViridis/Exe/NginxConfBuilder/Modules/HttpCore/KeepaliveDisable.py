@@ -1,7 +1,8 @@
 from typing import Annotated, Literal, Sequence
 
 from ._DirectivesList import DIR_KEEPALIVE_DISABLE
-from ...Common import DirectiveBase, NonEmptySequenceValidator
+from ...Common import DirectiveBase
+from ...Common.Validators import NonEmptySequenceValidator
 
 BrowserList = Annotated[Sequence[Literal["msie6", "safari"]], NonEmptySequenceValidator]
 

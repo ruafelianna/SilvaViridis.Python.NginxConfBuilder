@@ -1,7 +1,7 @@
 from SilvaViridis.Python.Common import ValueWithUnit
 
-from ._ValidatorsList import NonNegativeInt
 from .SizeUnit import SizeUnit
+from .Validators import NonNegativeInt
 
 class Size(ValueWithUnit[NonNegativeInt, SizeUnit]):
     def __init__(

@@ -1,5 +1,6 @@
 from ._DirectivesList import DIR_OUTPUT_BUFFERS
-from ...Common import DirectiveBase, PositiveInt, Size, SizeUnit
+from ...Common import DirectiveBase, Size, SizeUnit
+from ...Common.Validators import PositiveInt
 
 class OutputBuffers(DirectiveBase):
     def __init__(

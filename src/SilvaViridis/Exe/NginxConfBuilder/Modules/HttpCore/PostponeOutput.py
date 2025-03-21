@@ -1,5 +1,6 @@
 from ._DirectivesList import DIR_POSTPONE_OUTPUT
-from ...Common import DirectiveBase, PositiveSize, Size
+from ...Common import DirectiveBase, Size
+from ...Common.Validators import PositiveSize
 
 class PostponeOutput(DirectiveBase):
     def __init__(

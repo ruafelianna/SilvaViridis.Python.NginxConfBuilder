@@ -2,7 +2,8 @@ from beartype.vale import Is
 from typing import Annotated
 
 from ._DirectivesList import DIR_THREAD_POOL
-from ...Common import DirectiveBase, NonEmptyString, PositiveInt
+from ...Common import DirectiveBase
+from ...Common.Validators import NonEmptyString, PositiveInt
 
 def _is_less_than_2_16(
     value : PositiveInt,

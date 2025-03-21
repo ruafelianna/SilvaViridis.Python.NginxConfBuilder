@@ -1,4 +1,4 @@
-from ._ValidatorsList import NonEmptyString
+from .Validators import NonEmptyString
 
 class Path:
     def __init__(

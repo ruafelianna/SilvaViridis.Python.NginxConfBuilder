@@ -1,4 +1,4 @@
-from ._ValidatorsList import NonEmptyString
+from .Validators import NonEmptyString
 
 class Variable:
     def __init__(
