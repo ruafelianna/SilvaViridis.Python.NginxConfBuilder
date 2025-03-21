@@ -5,6 +5,9 @@ from beartype import beartype
 from enum import Enum
 from typing import Callable, Sequence
 
+from SilvaViridis.Python.Common.Enums import OrderedEnum
+from SilvaViridis.Python.Common.Web import HttpStatus, MimeType
+
 from ._ValidatorsList import NonEmptyString
 from .DirectiveDict import DirectiveDict
 
@@ -95,4 +98,10 @@ class DirectiveBase(ABC):
     def _to_str__enum(
         obj : Enum,
     ) -> str:
-        return str(obj.value)
+        if isinstance(obj, (
+            OrderedEnum,
+            HttpStatus,
+            MimeType,
+        )):
+            return str(obj.value)
+        return obj.name

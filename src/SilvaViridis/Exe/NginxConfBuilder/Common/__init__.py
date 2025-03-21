@@ -1,3 +1,4 @@
+from .Access import Access
 from .DirectiveBase import DirectiveBase
 from .DirectiveDict import DirectiveDict
 from .Offset import Offset
@@ -20,6 +21,7 @@ from ._ValidatorsList import (
 )
 
 __all__ = [
+    "Access",
     "DirectiveBase",
     "DirectiveDict",
     "Offset",
