@@ -10,6 +10,7 @@ from .SizeUnit import SizeUnit
 from .TimeInterval import TimeInterval
 from .TimeIntervalGroup import TimeIntervalGroup
 from .TimeIntervalUnit import TimeIntervalUnit
+from .TLVType import TLVType
 from .Variable import Variable
 
 __all__ = [
@@ -25,5 +26,6 @@ __all__ = [
     "TimeInterval",
     "TimeIntervalGroup",
     "TimeIntervalUnit",
+    "TLVType",
     "Variable",
 ]
