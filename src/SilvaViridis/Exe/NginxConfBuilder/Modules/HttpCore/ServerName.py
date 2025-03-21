@@ -14,4 +14,4 @@ class ServerName(DirectiveBase):
         super().__init__(DIR_SERVER_NAME)
 
         for name in names:
-            self.add_arg("\"\"" if name == "" else name)
+            self.add_arg("" if name == "" else name)

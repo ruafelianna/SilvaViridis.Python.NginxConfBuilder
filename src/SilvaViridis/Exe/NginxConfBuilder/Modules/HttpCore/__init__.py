@@ -40,6 +40,38 @@ from .MergeSlashes import MergeSlashes
 from .MsiePadding import MsiePadding
 from .MsieRefresh import MsieRefresh
 from .OpenFileCache import OpenFileCache
+from .OpenFileCacheErrors import OpenFileCacheErrors
+from .OpenFileCacheMinUses import OpenFileCacheMinUses
+from .OpenFileCacheValid import OpenFileCacheValid
+from .OutputBuffers import OutputBuffers
+from .PortInRedirect import PortInRedirect
+from .PostponeOutput import PostponeOutput
+from .ReadAhead import ReadAhead
+from .RecursiveErrorPages import RecursiveErrorPages
+from .RequestPoolSize import RequestPoolSize
+from .ResetTimedoutConnection import ResetTimedoutConnection
+from .ResolverTimeout import ResolverTimeout
+from .Root import Root
+from .Satisfy import Satisfy
+from .Sendfile import Sendfile
+from .SendfileMaxChunk import SendfileMaxChunk
+from .SendLowat import SendLowat
+from .SendTimeout import SendTimeout
+from .ServerName import ServerName
+from .ServerNameInRedirect import ServerNameInRedirect
+from .ServerNamesHashBucketSize import ServerNamesHashBucketSize
+from .ServerNamesHashMaxSize import ServerNamesHashMaxSize
+from .ServerTokens import ServerTokens
+from .SubrequestOutputBufferSize import SubrequestOutputBufferSize
+from .TcpNodelay import TcpNodelay
+from .TcpNopush import TcpNopush
+from .TryFiles import TryFiles
+from .Types import Types
+from .TypesHashBucketSize import TypesHashBucketSize
+from .TypesHashMaxSize import TypesHashMaxSize
+from .UnderscoresInHeaders import UnderscoresInHeaders
+from .VariablesHashBucketSize import VariablesHashBucketSize
+from .VariablesHashMaxSize import VariablesHashMaxSize
 
 from ._DirectivesList import (
     DIR_ABSOLUTE_REDIRECT,
@@ -167,6 +199,38 @@ __all__ = [
     "MsiePadding",
     "MsieRefresh",
     "OpenFileCache",
+    "OpenFileCacheErrors",
+    "OpenFileCacheMinUses",
+    "OpenFileCacheValid",
+    "OutputBuffers",
+    "PortInRedirect",
+    "PostponeOutput",
+    "ReadAhead",
+    "RecursiveErrorPages",
+    "RequestPoolSize",
+    "ResetTimedoutConnection",
+    "ResolverTimeout",
+    "Root",
+    "Satisfy",
+    "Sendfile",
+    "SendfileMaxChunk",
+    "SendLowat",
+    "SendTimeout",
+    "ServerName",
+    "ServerNameInRedirect",
+    "ServerNamesHashBucketSize",
+    "ServerNamesHashMaxSize",
+    "ServerTokens",
+    "SubrequestOutputBufferSize",
+    "TcpNodelay",
+    "TcpNopush",
+    "TryFiles",
+    "Types",
+    "TypesHashBucketSize",
+    "TypesHashMaxSize",
+    "UnderscoresInHeaders",
+    "VariablesHashBucketSize",
+    "VariablesHashMaxSize",
     "DIR_ABSOLUTE_REDIRECT",
     "DIR_AIO",
     "DIR_AIO_WRITE",
