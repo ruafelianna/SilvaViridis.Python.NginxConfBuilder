@@ -14,6 +14,7 @@ from .TimeIntervalGroup import TimeIntervalGroup
 from .TimeIntervalUnit import TimeIntervalUnit
 from .TLVType import TLVType
 from .Variable import Variable
+from .Zone import Zone
 
 __all__ = [
     "Access",
@@ -32,4 +33,5 @@ __all__ = [
     "TimeIntervalUnit",
     "TLVType",
     "Variable",
+    "Zone",
 ]

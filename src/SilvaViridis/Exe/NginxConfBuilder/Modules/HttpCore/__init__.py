@@ -19,6 +19,7 @@ from .DirectioAlignment import DirectioAlignment
 from .DisableSymlinks import DisableSymlinks
 from .ErrorPage import ErrorPage
 from .Etag import Etag
+from .Http import Http
 from .IfModifiedSince import IfModifiedSince
 from .IgnoreInvalidHeaders import IgnoreInvalidHeaders
 from .Internal import Internal
@@ -28,11 +29,14 @@ from .KeepaliveRequests import KeepaliveRequests
 from .KeepaliveTime import KeepaliveTime
 from .KeepaliveTimeout import KeepaliveTimeout
 from .LargeClientHeaderBuffers import LargeClientHeaderBuffers
+from .LimitExcept import AccessDirective, LimitExcept
 from .LimitRate import LimitRate
 from .LimitRateAfter import LimitRateAfter
 from .LingeringClose import LingeringClose
 from .LingeringTime import LingeringTime
 from .LingeringTimeout import LingeringTimeout
+from .Listen import KeepCnt, KeepIdle, KeepIntvl, Listen
+from .Location import Location
 from .LogNotFound import LogNotFound
 from .LogSubrequest import LogSubrequest
 from .MaxRanges import MaxRanges
@@ -50,6 +54,7 @@ from .ReadAhead import ReadAhead
 from .RecursiveErrorPages import RecursiveErrorPages
 from .RequestPoolSize import RequestPoolSize
 from .ResetTimedoutConnection import ResetTimedoutConnection
+from .Resolver import Resolver
 from .ResolverTimeout import ResolverTimeout
 from .Root import Root
 from .Satisfy import Satisfy
@@ -57,6 +62,7 @@ from .Sendfile import Sendfile
 from .SendfileMaxChunk import SendfileMaxChunk
 from .SendLowat import SendLowat
 from .SendTimeout import SendTimeout
+from .Server import Server
 from .ServerName import ServerName
 from .ServerNameInRedirect import ServerNameInRedirect
 from .ServerNamesHashBucketSize import ServerNamesHashBucketSize
@@ -158,6 +164,7 @@ from ._DirectivesList import (
 
 __all__ = [
     "AbsoluteRedirect",
+    "AccessDirective",
     "Aio",
     "AioWrite",
     "Alias",
@@ -178,6 +185,7 @@ __all__ = [
     "DisableSymlinks",
     "ErrorPage",
     "Etag",
+    "Http",
     "IfModifiedSince",
     "IgnoreInvalidHeaders",
     "Internal",
@@ -186,12 +194,18 @@ __all__ = [
     "KeepaliveRequests",
     "KeepaliveTime",
     "KeepaliveTimeout",
+    "KeepCnt",
+    "KeepIdle",
+    "KeepIntvl",
     "LargeClientHeaderBuffers",
+    "LimitExcept",
     "LimitRate",
     "LimitRateAfter",
     "LingeringClose",
     "LingeringTime",
     "LingeringTimeout",
+    "Listen",
+    "Location",
     "LogNotFound",
     "LogSubrequest",
     "MaxRanges",
@@ -210,6 +224,7 @@ __all__ = [
     "RecursiveErrorPages",
     "RequestPoolSize",
     "ResetTimedoutConnection",
+    "Resolver",
     "ResolverTimeout",
     "Root",
     "Satisfy",
@@ -217,6 +232,7 @@ __all__ = [
     "SendfileMaxChunk",
     "SendLowat",
     "SendTimeout",
+    "Server",
     "ServerName",
     "ServerNameInRedirect",
     "ServerNamesHashBucketSize",
