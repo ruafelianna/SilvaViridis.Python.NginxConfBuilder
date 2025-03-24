@@ -72,6 +72,10 @@ from .Types import Types
 from .TypesHashBucketSize import TypesHashBucketSize
 from .TypesHashMaxSize import TypesHashMaxSize
 from .UnderscoresInHeaders import UnderscoresInHeaders
+from ..Core import (
+    ErrorLog,
+    Include,
+)
 from ...Common import DirectiveBase
 
 class Server(DirectiveBase):
@@ -95,9 +99,11 @@ class Server(DirectiveBase):
         directio : Directio | None = None,
         directio_alignment : DirectioAlignment | None = None,
         disable_symlinks : DisableSymlinks | None = None,
+        error_log : ErrorLog | None = None,
         error_page_list : Sequence[ErrorPage] = [],
         etag : Etag | None = None,
         if_modified_since : IfModifiedSince | None = None,
+        include_list : Sequence[Include] = [],
         ignore_invalid_headers : IgnoreInvalidHeaders | None = None,
         keepalive_disable : KeepaliveDisable | None = None,
         keepalive_min_timeout : KeepaliveMinTimeout | None = None,
@@ -168,6 +174,7 @@ class Server(DirectiveBase):
         self.add_directive(directio)
         self.add_directive(directio_alignment)
         self.add_directive(disable_symlinks)
+        self.add_directive(error_log)
 
         for error_page in error_page_list:
             self.add_directive(error_page)
@@ -175,6 +182,10 @@ class Server(DirectiveBase):
         self.add_directive(etag)
         self.add_directive(if_modified_since)
         self.add_directive(ignore_invalid_headers)
+
+        for include in include_list:
+            self.add_directive(include)
+
         self.add_directive(keepalive_disable)
         self.add_directive(keepalive_min_timeout)
         self.add_directive(keepalive_requests)

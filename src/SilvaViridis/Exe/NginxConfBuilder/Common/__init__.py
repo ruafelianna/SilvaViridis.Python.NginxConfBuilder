@@ -2,6 +2,7 @@ from .Access import Access
 from .DirectiveBase import DirectiveBase
 from .DirectiveDict import DirectiveDict
 from .JSWType import JSWType
+from .LogLevel import LogLevel
 from .Offset import Offset
 from .OffsetUnit import OffsetUnit
 from .OnOff import OnOff
@@ -21,6 +22,7 @@ __all__ = [
     "DirectiveBase",
     "DirectiveDict",
     "JSWType",
+    "LogLevel",
     "Offset",
     "OffsetUnit",
     "OnOff",

@@ -66,6 +66,10 @@ from .TryFiles import TryFiles
 from .Types import Types
 from .TypesHashBucketSize import TypesHashBucketSize
 from .TypesHashMaxSize import TypesHashMaxSize
+from ..Core import (
+    ErrorLog,
+    Include,
+)
 from ...Common import DirectiveBase
 
 class Location(DirectiveBase):
@@ -87,9 +91,11 @@ class Location(DirectiveBase):
         directio : Directio | None = None,
         directio_alignment : DirectioAlignment | None = None,
         disable_symlinks : DisableSymlinks | None = None,
+        error_log : ErrorLog | None = None,
         error_page_list : Sequence[ErrorPage] = [], # in location
         etag : Etag | None = None,
         if_modified_since : IfModifiedSince | None = None,
+        include_list : Sequence[Include] = [],
         internal : Internal | None = None,
         keepalive_disable : KeepaliveDisable | None = None,
         keepalive_min_timeout : KeepaliveMinTimeout | None = None,
@@ -153,12 +159,17 @@ class Location(DirectiveBase):
         self.add_directive(directio)
         self.add_directive(directio_alignment)
         self.add_directive(disable_symlinks)
+        self.add_directive(error_log)
 
         for error_page in error_page_list: # in location
             self.add_directive(error_page)
 
         self.add_directive(etag)
         self.add_directive(if_modified_since)
+
+        for include in include_list:
+            self.add_directive(include)
+
         self.add_directive(internal)
         self.add_directive(keepalive_disable)
         self.add_directive(keepalive_min_timeout)
