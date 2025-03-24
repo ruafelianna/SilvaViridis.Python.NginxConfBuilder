@@ -80,7 +80,7 @@ class DirectiveBase(ABC):
 
     def add_directive(
         self,
-        directive : DirectiveBase,
+        directive : DirectiveBase | None,
     ) -> None:
         if directive == self:
             raise ValueError("Cannot add itself to the list of directives to prevent cyclic references. Please, make a copy of an object.")
