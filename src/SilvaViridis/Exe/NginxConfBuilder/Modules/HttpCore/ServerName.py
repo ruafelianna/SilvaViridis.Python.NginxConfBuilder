@@ -1,15 +1,14 @@
-from typing import Annotated, Literal, Sequence
+from typing import Literal
+
+from SilvaViridis.Python.Common.Types import NonEmptySequence
 
 from ._DirectivesList import DIR_SERVER_NAME
 from ...Common import DirectiveBase, Path
-from ...Common.Validators import NonEmptySequenceValidator
-
-ServerNameList = Annotated[Sequence[Path | Literal[""]], NonEmptySequenceValidator]
 
 class ServerName(DirectiveBase):
     def __init__(
         self,
-        names : ServerNameList = [""],
+        names : NonEmptySequence[Path | Literal[""]] = [""],
     ):
         super().__init__(DIR_SERVER_NAME)
 

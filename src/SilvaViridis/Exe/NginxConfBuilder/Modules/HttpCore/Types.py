@@ -1,13 +1,15 @@
+from collections.abc import Mapping
+
+from SilvaViridis.Python.Common.Types import NonEmptyString
 from SilvaViridis.Python.Common.Web import MimeType
 
 from ._DirectivesList import DIR_TYPES
 from ...Common import DirectiveBase
-from ...Common.Validators import NonEmptyString
 
 class Types(DirectiveBase):
     def __init__(
         self,
-        mapping : dict[MimeType, set[NonEmptyString]] = {
+        mapping : Mapping[MimeType, set[NonEmptyString]] = {
             MimeType.text__html: set(("html",)),
             MimeType.image__gif: set(("gif",)),
             MimeType.image__jpeg: set(("jpg",)),

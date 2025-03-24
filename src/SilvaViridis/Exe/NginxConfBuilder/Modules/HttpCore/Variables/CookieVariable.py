@@ -1,5 +1,6 @@
+from SilvaViridis.Python.Common.Types import NonEmptyString
+
 from ....Common import Variable
-from ....Common.Validators import NonEmptyString
 
 class CookieVariable(Variable):
     def __init__(

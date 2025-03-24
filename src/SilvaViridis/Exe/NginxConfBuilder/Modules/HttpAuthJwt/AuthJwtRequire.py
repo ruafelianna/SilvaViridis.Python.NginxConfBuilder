@@ -1,10 +1,11 @@
-from typing import Literal, Sequence
+from collections.abc import Sequence
+from typing import Literal
 
+from SilvaViridis.Python.Common.Types import NonEmptyString
 from SilvaViridis.Python.Common.Web import HttpStatus
 
 from ._DirectivesList import DIR_AUTH_JWT_REQUIRE
 from ...Common import DirectiveBase, Variable
-from ...Common.Validators import NonEmptyString
 
 class AuthJwtRequire(DirectiveBase):
     def __init__(

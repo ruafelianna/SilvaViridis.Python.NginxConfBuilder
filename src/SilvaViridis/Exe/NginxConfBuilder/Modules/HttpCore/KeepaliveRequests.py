@@ -1,6 +1,7 @@
+from SilvaViridis.Python.Common.Types import PositiveInt
+
 from ._DirectivesList import DIR_KEEPALIVE_REQUESTS
 from ...Common import DirectiveBase
-from ...Common.Validators import PositiveInt
 
 class KeepaliveRequests(DirectiveBase):
     def __init__(

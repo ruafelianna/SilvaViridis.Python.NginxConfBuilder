@@ -1,24 +1,23 @@
 from beartype.vale import Is
-from typing import Annotated, Sequence, Literal
+from typing import Annotated, Literal
+
+from SilvaViridis.Python.Common.Types import NonEmptySequence
 
 from ._DirectivesList import DIR_CLIENT_BODY_TEMP_PATH
 from ...Common import DirectiveBase, Path
-from ...Common.Validators import NonEmptySequenceValidator
 
-Seq123 = Sequence[Literal[1, 2, 3]]
+type NonEmpty123Sequence = NonEmptySequence[Literal[1, 2, 3]]
 
 def _is_1_2_3(
-    seq : Seq123,
+    seq : NonEmpty123Sequence,
 ) -> bool:
     return all(elem in (1, 2, 3) for elem in seq)
-
-LevelList = Annotated[Seq123, NonEmptySequenceValidator, Is[_is_1_2_3]]
 
 class ClientBodyTempPath(DirectiveBase):
     def __init__(
         self,
         path : Path = Path("client_body_temp"),
-        levels : LevelList | None = None,
+        levels : Annotated[NonEmpty123Sequence, Is[_is_1_2_3]] | None = None,
     ):
         super().__init__(DIR_CLIENT_BODY_TEMP_PATH)
         self.add_arg(path)

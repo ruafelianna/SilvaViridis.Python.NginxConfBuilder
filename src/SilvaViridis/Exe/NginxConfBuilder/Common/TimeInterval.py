@@ -1,7 +1,7 @@
 from SilvaViridis.Python.Common import ValueWithUnit
+from SilvaViridis.Python.Common.Types import NonNegativeInt
 
 from .TimeIntervalUnit import TimeIntervalUnit
-from .Validators import NonNegativeInt
 
 class TimeInterval(ValueWithUnit[int, TimeIntervalUnit]):
     def __init__(

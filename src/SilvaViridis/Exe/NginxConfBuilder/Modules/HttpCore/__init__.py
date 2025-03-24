@@ -7,7 +7,7 @@ from .ChunkedTransferEncoding import ChunkedTransferEncoding
 from .ClientBodyBufferSize import ClientBodyBufferSize
 from .ClientBodyInFileOnly import ClientBodyInFileOnly
 from .ClientBodyInSingleBuffer import ClientBodyInSingleBuffer
-from .ClientBodyTempPath import ClientBodyTempPath
+from .ClientBodyTempPath import ClientBodyTempPath, NonEmpty123Sequence
 from .ClientBodyTimeout import ClientBodyTimeout
 from .ClientHeaderBufferSize import ClientHeaderBufferSize
 from .ClientHeaderTimeout import ClientHeaderTimeout
@@ -198,6 +198,7 @@ __all__ = [
     "MergeSlashes",
     "MsiePadding",
     "MsieRefresh",
+    "NonEmpty123Sequence",
     "OpenFileCache",
     "OpenFileCacheErrors",
     "OpenFileCacheMinUses",

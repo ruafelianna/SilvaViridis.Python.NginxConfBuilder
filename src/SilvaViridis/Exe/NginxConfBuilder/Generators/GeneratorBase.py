@@ -1,5 +1,5 @@
 from abc import ABC
-from typing import Callable, Sequence
+from collections.abc import Callable, Sequence
 
 from ..Common import (
     DirectiveBase,

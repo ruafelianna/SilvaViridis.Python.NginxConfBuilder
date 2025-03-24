@@ -1,16 +1,13 @@
-from typing import Annotated, Sequence
+from SilvaViridis.Python.Common.Types import NonEmptySequence, NonEmptyString
 
 from ._DirectivesList import DIR_AUTH_JWT_CLAIM_SET
 from ...Common import DirectiveBase, Variable
-from ...Common.Validators import NonEmptySequenceValidator, NonEmptyString
-
-KeyList = Annotated[Sequence[NonEmptyString], NonEmptySequenceValidator]
 
 class AuthJwtClaimSet(DirectiveBase):
     def __init__(
         self,
         variable : Variable,
-        keys : KeyList,
+        keys : NonEmptySequence[NonEmptyString],
     ):
         super().__init__(DIR_AUTH_JWT_CLAIM_SET)
         self.add_arg(variable)

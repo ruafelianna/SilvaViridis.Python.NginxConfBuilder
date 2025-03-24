@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from abc import ABC
 from beartype import beartype
+from collections.abc import Callable, Sequence
 from enum import Enum
-from typing import Callable, Sequence
 
 from SilvaViridis.Python.Common.Enums import OrderedEnum
+from SilvaViridis.Python.Common.Types import NonEmptyString
 from SilvaViridis.Python.Common.Web import HttpStatus, MimeType
 
 from .DirectiveDict import DirectiveDict
-from .Validators import NonEmptyString
 
 @beartype
 class DirectiveBase(ABC):
@@ -66,6 +66,11 @@ class DirectiveBase(ABC):
             if to_str is None:
                 if isinstance(value, Enum):
                     result = DirectiveBase._to_str__enum(value)
+                elif isinstance(value, bool):
+                    if value:
+                        result = ""
+                    else:
+                        return
                 else:
                     result = str(value)
             else:

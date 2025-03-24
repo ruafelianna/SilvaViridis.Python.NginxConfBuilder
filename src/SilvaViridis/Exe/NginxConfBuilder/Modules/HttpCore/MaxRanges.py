@@ -1,6 +1,7 @@
+from SilvaViridis.Python.Common.Types import PositiveInt
+
 from ._DirectivesList import DIR_MAX_RANGES
 from ...Common import DirectiveBase
-from ...Common.Validators import PositiveInt
 
 class MaxRanges(DirectiveBase):
     def __init__(

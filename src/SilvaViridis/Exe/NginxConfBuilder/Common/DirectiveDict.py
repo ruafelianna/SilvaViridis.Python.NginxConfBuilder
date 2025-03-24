@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import NotRequired, Sequence, TypedDict
+from collections.abc import Sequence
+from typing import NotRequired, TypedDict
 
 class DirectiveDict(TypedDict):
     directive : str

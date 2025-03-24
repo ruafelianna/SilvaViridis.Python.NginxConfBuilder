@@ -1,4 +1,4 @@
-from .Validators import NonEmptyString
+from SilvaViridis.Python.Common.Types import NonEmptyString
 
 class Variable:
     def __init__(

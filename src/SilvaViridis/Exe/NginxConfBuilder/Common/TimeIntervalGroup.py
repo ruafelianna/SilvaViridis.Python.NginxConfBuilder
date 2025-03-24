@@ -1,8 +1,9 @@
-from typing import Sequence
+from collections.abc import Sequence
+
+from SilvaViridis.Python.Common.Types import NonNegativeInt
 
 from .TimeInterval import TimeInterval
 from .TimeIntervalUnit import TimeIntervalUnit
-from .Validators import NonNegativeInt
 
 class TimeIntervalGroup:
     def __init__(

@@ -1,17 +1,15 @@
-from typing import Annotated, Literal, Sequence
+from typing import Literal
 
+from SilvaViridis.Python.Common.Types import NonEmptySequence
 from SilvaViridis.Python.Common.Web import HttpStatus
 
 from ._DirectivesList import DIR_ERROR_PAGE
 from ...Common import DirectiveBase, Path
-from ...Common.Validators import NonEmptySequenceValidator
-
-HttpStatusList = Annotated[Sequence[HttpStatus], NonEmptySequenceValidator]
 
 class ErrorPage(DirectiveBase):
     def __init__(
         self,
-        codes : HttpStatusList,
+        codes : NonEmptySequence[HttpStatus],
         uri : Path,
         response : HttpStatus | Literal["="] | None = None,
     ):

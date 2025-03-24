@@ -6,6 +6,7 @@ from .Offset import Offset
 from .OffsetUnit import OffsetUnit
 from .OnOff import OnOff
 from .Path import Path
+from .PositiveSize import PositiveSize
 from .Size import Size
 from .SizeUnit import SizeUnit
 from .TimeInterval import TimeInterval
@@ -23,6 +24,7 @@ __all__ = [
     "OffsetUnit",
     "OnOff",
     "Path",
+    "PositiveSize",
     "Size",
     "SizeUnit",
     "TimeInterval",

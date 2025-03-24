@@ -1,7 +1,7 @@
 from SilvaViridis.Python.Common import ValueWithUnit
+from SilvaViridis.Python.Common.Types import NonNegativeInt
 
 from .OffsetUnit import OffsetUnit
-from .Validators import NonNegativeInt
 
 class Offset(ValueWithUnit[int, OffsetUnit]):
     def __init__(

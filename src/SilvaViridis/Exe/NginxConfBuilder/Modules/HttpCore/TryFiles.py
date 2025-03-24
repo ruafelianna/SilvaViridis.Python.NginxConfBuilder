@@ -1,17 +1,13 @@
-from typing import Annotated, Sequence
-
+from SilvaViridis.Python.Common.Types import NonEmptySequence
 from SilvaViridis.Python.Common.Web import HttpStatus
 
 from ._DirectivesList import DIR_TRY_FILES
 from ...Common import DirectiveBase, Path
-from ...Common.Validators import NonEmptySequenceValidator
-
-FileList = Annotated[Sequence[Path], NonEmptySequenceValidator]
 
 class TryFiles(DirectiveBase):
     def __init__(
         self,
-        files : FileList,
+        files : NonEmptySequence[Path],
         finish : Path | HttpStatus,
     ):
         super().__init__(DIR_TRY_FILES)

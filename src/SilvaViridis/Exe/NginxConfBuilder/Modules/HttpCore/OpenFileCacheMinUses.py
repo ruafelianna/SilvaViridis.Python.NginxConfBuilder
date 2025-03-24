@@ -1,6 +1,7 @@
+from SilvaViridis.Python.Common.Types import PositiveInt
+
 from ._DirectivesList import DIR_OPEN_FILE_CACHE_MIN_USES
 from ...Common import DirectiveBase
-from ...Common.Validators import PositiveInt
 
 class OpenFileCacheMinUses(DirectiveBase):
     def __init__(
