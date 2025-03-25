@@ -6,6 +6,7 @@ from SilvaViridis.Python.Common.Web import HttpMethod
 from ..HttpAccess import Allow, Deny
 from ..HttpAuthBasic import AuthBasic, AuthBasicUserFile
 from ..HttpAuthJwt import AuthJwt, AuthJwtKeyFile, AuthJwtKeyRequest, AuthJwtType, AuthJwtRequire
+from ..HttpLog import AccessLog
 from ...Common import DirectiveBase
 
 DIR_LIMIT_EXCEPT = "limit_except"
@@ -18,6 +19,7 @@ class LimitExcept(DirectiveBase):
         order : int,
         methods : NonEmptySequence[HttpMethod],
         access_list : Sequence[AccessDirective] = [],
+        access_log : AccessLog | None = None,
     ):
         super().__init__(order, DIR_LIMIT_EXCEPT)
 
@@ -26,3 +28,5 @@ class LimitExcept(DirectiveBase):
 
         for directive in access_list:
             self.add_directive(directive)
+
+        self.add_directive(access_log)

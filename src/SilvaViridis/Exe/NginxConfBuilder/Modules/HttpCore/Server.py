@@ -79,6 +79,19 @@ from ..Core import (
 
 from ...Common import DirectiveBase
 
+from ..HttpGzip import (
+    Gzip,
+)
+
+from ..HttpLog import (
+    AccessLog,
+)
+
+from ..HttpSsl import (
+    SslPreferServerCiphers,
+    SslProtocols,
+)
+
 DIR_SERVER = "server"
 
 class Server(DirectiveBase):
@@ -86,6 +99,7 @@ class Server(DirectiveBase):
         self,
         order : int,
         absolute_redirect : AbsoluteRedirect | None = None,
+        access_log : AccessLog | None = None,
         aio : Aio | None = None,
         aio_write : AioWrite | None = None,
         auth_delay : AuthDelay | None = None,
@@ -106,6 +120,7 @@ class Server(DirectiveBase):
         error_log : ErrorLog | None = None,
         error_page_list : Sequence[ErrorPage] = [],
         etag : Etag | None = None,
+        gzip : Gzip | None = None,
         if_modified_since : IfModifiedSince | None = None,
         include_list : Sequence[Include] = [],
         ignore_invalid_headers : IgnoreInvalidHeaders | None = None,
@@ -150,6 +165,8 @@ class Server(DirectiveBase):
         server_name : ServerName | None = None,
         server_name_in_redirect : ServerNameInRedirect | None = None,
         server_tokens : ServerTokens | None = None,
+        ssl_prefer_server_ciphers : SslPreferServerCiphers | None = None,
+        ssl_protocols : SslProtocols | None = None,
         subrequest_output_buffer_size : SubrequestOutputBufferSize | None = None,
         tcp_nodelay : TcpNodelay | None = None,
         tcp_nopush : TcpNopush | None = None,
@@ -161,6 +178,7 @@ class Server(DirectiveBase):
     ):
         super().__init__(order, DIR_SERVER)
         self.add_directive(absolute_redirect)
+        self.add_directive(access_log)
         self.add_directive(aio)
         self.add_directive(aio_write)
         self.add_directive(auth_delay)
@@ -184,6 +202,7 @@ class Server(DirectiveBase):
             self.add_directive(error_page)
 
         self.add_directive(etag)
+        self.add_directive(gzip)
         self.add_directive(if_modified_since)
         self.add_directive(ignore_invalid_headers)
 
@@ -236,6 +255,8 @@ class Server(DirectiveBase):
         self.add_directive(server_name)
         self.add_directive(server_name_in_redirect)
         self.add_directive(server_tokens)
+        self.add_directive(ssl_prefer_server_ciphers)
+        self.add_directive(ssl_protocols)
         self.add_directive(subrequest_output_buffer_size)
         self.add_directive(tcp_nodelay)
         self.add_directive(tcp_nopush)

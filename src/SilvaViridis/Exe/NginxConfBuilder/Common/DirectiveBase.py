@@ -10,6 +10,7 @@ from SilvaViridis.Python.Common.Types import NonEmptyString
 from SilvaViridis.Python.Common.Web import HttpStatus, MimeType
 
 from .DirectiveDict import DirectiveDict
+from .GzipCompressionLevel import GzipCompressionLevel
 
 @beartype
 class DirectiveBase(ABC):
@@ -115,6 +116,7 @@ class DirectiveBase(ABC):
             OrderedEnum,
             HttpStatus,
             MimeType,
+            GzipCompressionLevel,
         )):
             return str(obj.value)
         return obj.name

@@ -1,6 +1,7 @@
 from .Access import Access
 from .DirectiveBase import DirectiveBase
 from .DirectiveDict import DirectiveDict
+from .GzipCompressionLevel import GzipCompressionLevel
 from .JSWType import JSWType
 from .LogLevel import LogLevel
 from .Offset import Offset
@@ -21,6 +22,7 @@ __all__ = [
     "Access",
     "DirectiveBase",
     "DirectiveDict",
+    "GzipCompressionLevel",
     "JSWType",
     "LogLevel",
     "Offset",

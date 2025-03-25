@@ -71,6 +71,14 @@ from ..Core import (
     Include,
 )
 
+from ..HttpGzip import (
+    Gzip,
+)
+
+from ..HttpLog import (
+    AccessLog,
+)
+
 from ...Common import DirectiveBase
 
 DIR_LOCATION = "location"
@@ -80,6 +88,7 @@ class Location(DirectiveBase):
         self,
         order : int,
         absolute_redirect : AbsoluteRedirect | None = None,
+        access_log : AccessLog | None = None,
         aio : Aio | None = None,
         aio_write : AioWrite | None = None,
         alias : Alias | None = None,
@@ -96,8 +105,9 @@ class Location(DirectiveBase):
         directio_alignment : DirectioAlignment | None = None,
         disable_symlinks : DisableSymlinks | None = None,
         error_log : ErrorLog | None = None,
-        error_page_list : Sequence[ErrorPage] = [], # in location
+        error_page_list : Sequence[ErrorPage] = [],
         etag : Etag | None = None,
+        gzip : Gzip | None = None,
         if_modified_since : IfModifiedSince | None = None,
         include_list : Sequence[Include] = [],
         internal : Internal | None = None,
@@ -107,8 +117,8 @@ class Location(DirectiveBase):
         keepalive_time : KeepaliveTime | None = None,
         keepalive_timeout : KeepaliveTimeout | None = None,
         limit_except : LimitExcept | None = None,
-        limit_rate : LimitRate | None = None, # in location
-        limit_rate_after : LimitRateAfter | None = None, # in location
+        limit_rate : LimitRate | None = None,
+        limit_rate_after : LimitRateAfter | None = None,
         lingering_close : LingeringClose | None = None,
         lingering_time : LingeringTime | None = None,
         lingering_timeout : LingeringTimeout | None = None,
@@ -130,11 +140,11 @@ class Location(DirectiveBase):
         reset_timedout_connection : ResetTimedoutConnection | None = None,
         resolver : Resolver | None = None,
         resolver_timeout : ResolverTimeout | None = None,
-        root : Root | None = None, # in location
+        root : Root | None = None,
         satisfy : Satisfy | None = None,
         send_lowat : SendLowat | None = None,
         send_timeout : SendTimeout | None = None,
-        sendfile : Sendfile | None = None, # in location
+        sendfile : Sendfile | None = None,
         sendfile_max_chunk : SendfileMaxChunk | None = None,
         server_name_in_redirect : ServerNameInRedirect | None = None,
         server_tokens : ServerTokens | None = None,
@@ -148,6 +158,7 @@ class Location(DirectiveBase):
     ):
         super().__init__(order, DIR_LOCATION)
         self.add_directive(absolute_redirect)
+        self.add_directive(access_log)
         self.add_directive(aio)
         self.add_directive(aio_write)
         self.add_directive(alias)
@@ -165,10 +176,11 @@ class Location(DirectiveBase):
         self.add_directive(disable_symlinks)
         self.add_directive(error_log)
 
-        for error_page in error_page_list: # in location
+        for error_page in error_page_list:
             self.add_directive(error_page)
 
         self.add_directive(etag)
+        self.add_directive(gzip)
         self.add_directive(if_modified_since)
 
         for include in include_list:
@@ -181,13 +193,13 @@ class Location(DirectiveBase):
         self.add_directive(keepalive_time)
         self.add_directive(keepalive_timeout)
         self.add_directive(limit_except)
-        self.add_directive(limit_rate) # in location
-        self.add_directive(limit_rate_after) # in location
+        self.add_directive(limit_rate)
+        self.add_directive(limit_rate_after)
         self.add_directive(lingering_close)
         self.add_directive(lingering_time)
         self.add_directive(lingering_timeout)
 
-        for location in location_list: # in location
+        for location in location_list:
             self.add_directive(location)
 
         self.add_directive(log_not_found)
@@ -207,11 +219,11 @@ class Location(DirectiveBase):
         self.add_directive(reset_timedout_connection)
         self.add_directive(resolver)
         self.add_directive(resolver_timeout)
-        self.add_directive(root) # in location
+        self.add_directive(root)
         self.add_directive(satisfy)
         self.add_directive(send_lowat)
         self.add_directive(send_timeout)
-        self.add_directive(sendfile) # in location
+        self.add_directive(sendfile)
         self.add_directive(sendfile_max_chunk)
         self.add_directive(server_name_in_redirect)
         self.add_directive(server_tokens)
