@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_AUTH_JWT_KEY_REQUEST
 from ...Common import DirectiveBase, Path
+
+DIR_AUTH_JWT_KEY_REQUEST = "auth_jwt_key_request"
 
 class AuthJwtKeyRequest(DirectiveBase):
     def __init__(

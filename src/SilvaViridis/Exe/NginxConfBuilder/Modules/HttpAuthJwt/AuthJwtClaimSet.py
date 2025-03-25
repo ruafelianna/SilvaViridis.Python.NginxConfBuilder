@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import NonEmptySequence, NonEmptyString
 
-from ._DirectivesList import DIR_AUTH_JWT_CLAIM_SET
 from ...Common import DirectiveBase, Variable
+
+DIR_AUTH_JWT_CLAIM_SET = "auth_jwt_claim_set"
 
 class AuthJwtClaimSet(DirectiveBase):
     def __init__(

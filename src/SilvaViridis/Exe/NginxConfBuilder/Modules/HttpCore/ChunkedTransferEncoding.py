@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_CHUNKED_TRANSFER_ENCODING
 from ...Common import DirectiveBase, OnOff
+
+DIR_CHUNKED_TRANSFER_ENCODING = "chunked_transfer_encoding"
 
 class ChunkedTransferEncoding(DirectiveBase):
     def __init__(

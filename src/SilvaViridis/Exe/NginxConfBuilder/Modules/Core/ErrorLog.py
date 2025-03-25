@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_ERROR_LOG
 from ...Common import DirectiveBase, LogLevel, Path
+
+DIR_ERROR_LOG = "error_log"
 
 class ErrorLog(DirectiveBase):
     def __init__(

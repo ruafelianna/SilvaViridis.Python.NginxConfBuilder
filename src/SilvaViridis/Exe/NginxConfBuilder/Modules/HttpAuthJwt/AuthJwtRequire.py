@@ -4,8 +4,9 @@ from typing import Literal
 from SilvaViridis.Python.Common.Types import NonEmptyString
 from SilvaViridis.Python.Common.Web import HttpStatus
 
-from ._DirectivesList import DIR_AUTH_JWT_REQUIRE
 from ...Common import DirectiveBase, Variable
+
+DIR_AUTH_JWT_REQUIRE = "auth_jwt_require"
 
 class AuthJwtRequire(DirectiveBase):
     def __init__(

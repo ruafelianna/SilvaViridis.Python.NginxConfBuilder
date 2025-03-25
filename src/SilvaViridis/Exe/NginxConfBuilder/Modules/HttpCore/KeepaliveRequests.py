@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import PositiveInt
 
-from ._DirectivesList import DIR_KEEPALIVE_REQUESTS
 from ...Common import DirectiveBase
+
+DIR_KEEPALIVE_REQUESTS = "keepalive_requests"
 
 class KeepaliveRequests(DirectiveBase):
     def __init__(

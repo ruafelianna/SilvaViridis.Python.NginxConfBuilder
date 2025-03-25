@@ -2,8 +2,9 @@ from typing import Literal
 
 from SilvaViridis.Python.Common.Types import NonEmptySequence
 
-from ._DirectivesList import DIR_KEEPALIVE_DISABLE
 from ...Common import DirectiveBase
+
+DIR_KEEPALIVE_DISABLE = "keepalive_disable"
 
 class KeepaliveDisable(DirectiveBase):
     def __init__(

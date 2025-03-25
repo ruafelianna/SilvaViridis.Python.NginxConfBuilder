@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_MERGE_SLASHES
 from ...Common import DirectiveBase, OnOff
+
+DIR_MERGE_SLASHES = "merge_slashes"
 
 class MergeSlashes(DirectiveBase):
     def __init__(

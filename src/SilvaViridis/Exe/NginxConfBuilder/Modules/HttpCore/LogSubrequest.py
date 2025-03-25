@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_LOG_SUBREQUEST
 from ...Common import DirectiveBase, OnOff
+
+DIR_LOG_SUBREQUEST = "log_subrequest"
 
 class LogSubrequest(DirectiveBase):
     def __init__(

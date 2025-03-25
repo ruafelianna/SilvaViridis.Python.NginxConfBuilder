@@ -1,7 +1,8 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_DISABLE_SYMLINKS
 from ...Common import DirectiveBase, OnOff, Path
+
+DIR_DISABLE_SYMLINKS = "disable_symlinks"
 
 class DisableSymlinks(DirectiveBase):
     def __init__(

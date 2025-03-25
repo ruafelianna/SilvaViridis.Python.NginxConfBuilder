@@ -1,6 +1,5 @@
 from collections.abc import Sequence
 
-from ._DirectivesList import DIR_HTTP
 from .AbsoluteRedirect import AbsoluteRedirect
 from .Aio import Aio
 from .AioWrite import AioWrite
@@ -73,11 +72,15 @@ from .TypesHashMaxSize import TypesHashMaxSize
 from .UnderscoresInHeaders import UnderscoresInHeaders
 from .VariablesHashBucketSize import VariablesHashBucketSize
 from .VariablesHashMaxSize import VariablesHashMaxSize
+
 from ..Core import (
     ErrorLog,
     Include,
 )
+
 from ...Common import DirectiveBase
+
+DIR_HTTP = "http"
 
 class Http(DirectiveBase):
     def __init__(

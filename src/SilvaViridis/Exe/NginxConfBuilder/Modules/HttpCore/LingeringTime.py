@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_LINGERING_TIME
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_LINGERING_TIME = "lingering_time"
 
 class LingeringTime(DirectiveBase):
     def __init__(

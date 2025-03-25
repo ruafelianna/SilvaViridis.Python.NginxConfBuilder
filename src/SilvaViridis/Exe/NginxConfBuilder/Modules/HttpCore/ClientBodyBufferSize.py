@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_CLIENT_BODY_BUFFER_SIZE
 from ...Common import DirectiveBase, Size, SizeUnit
+
+DIR_CLIENT_BODY_BUFFER_SIZE = "client_body_buffer_size"
 
 class ClientBodyBufferSize(DirectiveBase):
     def __init__(

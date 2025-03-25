@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SUBREQUEST_OUTPUT_BUFFER_SIZE
 from ...Common import DirectiveBase, Size, SizeUnit
+
+DIR_SUBREQUEST_OUTPUT_BUFFER_SIZE = "subrequest_output_buffer_size"
 
 class SubrequestOutputBufferSize(DirectiveBase):
     def __init__(

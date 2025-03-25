@@ -1,7 +1,8 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_IF_MODIFIED_SINCE
 from ...Common import DirectiveBase, OnOff
+
+DIR_IF_MODIFIED_SINCE = "if_modified_since"
 
 class IfModifiedSince(DirectiveBase):
     def __init__(

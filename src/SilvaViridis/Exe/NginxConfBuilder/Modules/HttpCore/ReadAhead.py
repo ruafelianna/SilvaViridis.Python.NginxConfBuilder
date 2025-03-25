@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_READ_AHEAD
 from ...Common import DirectiveBase, Size
+
+DIR_READ_AHEAD = "read_ahead"
 
 class ReadAhead(DirectiveBase):
     def __init__(

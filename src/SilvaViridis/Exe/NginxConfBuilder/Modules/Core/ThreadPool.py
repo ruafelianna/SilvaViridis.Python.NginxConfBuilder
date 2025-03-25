@@ -3,8 +3,9 @@ from typing import Annotated
 
 from SilvaViridis.Python.Common.Types import NonEmptyString, PositiveInt
 
-from ._DirectivesList import DIR_THREAD_POOL
 from ...Common import DirectiveBase
+
+DIR_THREAD_POOL = "thread_pool"
 
 def _is_less_than_2_16(
     value : PositiveInt,

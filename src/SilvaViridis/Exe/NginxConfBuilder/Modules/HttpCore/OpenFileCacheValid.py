@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_OPEN_FILE_CACHE_VALID
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_OPEN_FILE_CACHE_VALID = "open_file_cache_valid"
 
 class OpenFileCacheValid(DirectiveBase):
     def __init__(

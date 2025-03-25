@@ -3,8 +3,9 @@ from typing import Literal
 from SilvaViridis.Python.Common.Text import StringHelper as SH
 from SilvaViridis.Python.Common.Types import PositiveInt, UInt16
 
-from ._DirectivesList import DIR_LISTEN
 from ...Common import DirectiveBase, OnOff, Path, Size, TimeInterval, TimeIntervalGroup
+
+DIR_LISTEN = "listen"
 
 type KeepIdle = TimeInterval | TimeIntervalGroup | None
 type KeepIntvl = TimeInterval | TimeIntervalGroup | None

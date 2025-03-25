@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_ABSOLUTE_REDIRECT
 from ...Common import DirectiveBase, OnOff
+
+DIR_ABSOLUTE_REDIRECT = "absolute_redirect"
 
 class AbsoluteRedirect(DirectiveBase):
     def __init__(

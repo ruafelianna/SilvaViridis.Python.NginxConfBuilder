@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_DIRECTIO_ALIGNMENT
 from ...Common import DirectiveBase, Size
+
+DIR_DIRECTIO_ALIGNMENT = "directio_alignment"
 
 class DirectioAlignment(DirectiveBase):
     def __init__(

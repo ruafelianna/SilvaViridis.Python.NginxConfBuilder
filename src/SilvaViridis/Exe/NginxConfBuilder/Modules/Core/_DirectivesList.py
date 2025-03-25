@@ -1,6 +1,0 @@
-DIR_ERROR_LOG = "error_log"
-DIR_INCLUDE = "include"
-DIR_PID = "pid"
-DIR_THREAD_POOL = "thread_pool"
-DIR_USER = "user"
-DIR_WORKER_PROCESSES = "worker_processes"

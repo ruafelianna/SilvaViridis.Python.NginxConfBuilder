@@ -1,7 +1,8 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_SERVER_TOKENS
 from ...Common import DirectiveBase, OnOff
+
+DIR_SERVER_TOKENS = "server_tokens"
 
 class ServerTokens(DirectiveBase):
     def __init__(

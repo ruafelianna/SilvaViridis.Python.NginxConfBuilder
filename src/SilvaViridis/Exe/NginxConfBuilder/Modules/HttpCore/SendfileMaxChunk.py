@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SENDFILE_MAX_CHUNK
 from ...Common import DirectiveBase, Size, SizeUnit
+
+DIR_SENDFILE_MAX_CHUNK = "sendfile_max_chunk"
 
 class SendfileMaxChunk(DirectiveBase):
     def __init__(

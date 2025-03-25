@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_AUTH_BASIC_USER_FILE
 from ...Common import DirectiveBase, Path
+
+DIR_AUTH_BASIC_USER_FILE = "auth_basic_user_file"
 
 class AuthBasicUserFile(DirectiveBase):
     def __init__(

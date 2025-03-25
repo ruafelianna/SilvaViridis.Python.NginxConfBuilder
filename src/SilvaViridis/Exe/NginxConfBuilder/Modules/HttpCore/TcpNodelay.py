@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_TCP_NODELAY
 from ...Common import DirectiveBase, OnOff
+
+DIR_TCP_NODELAY = "tcp_nodelay"
 
 class TcpNodelay(DirectiveBase):
     def __init__(

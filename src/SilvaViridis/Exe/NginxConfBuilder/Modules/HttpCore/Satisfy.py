@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SATISFY
 from ...Common import Access, DirectiveBase
+
+DIR_SATISFY = "satisfy"
 
 class Satisfy(DirectiveBase):
     def __init__(

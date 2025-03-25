@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_REQUEST_POOL_SIZE
 from ...Common import DirectiveBase, Size, SizeUnit
+
+DIR_REQUEST_POOL_SIZE = "request_pool_size"
 
 class RequestPoolSize(DirectiveBase):
     def __init__(

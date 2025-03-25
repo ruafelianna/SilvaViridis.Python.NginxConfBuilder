@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SENDFILE
 from ...Common import DirectiveBase, OnOff
+
+DIR_SENDFILE = "sendfile"
 
 class Sendfile(DirectiveBase):
     def __init__(

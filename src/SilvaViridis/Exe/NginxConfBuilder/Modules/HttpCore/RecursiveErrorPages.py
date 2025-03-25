@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_RECURSIVE_ERROR_PAGES
 from ...Common import DirectiveBase, OnOff
+
+DIR_RECURSIVE_ERROR_PAGES = "recursive_error_pages"
 
 class RecursiveErrorPages(DirectiveBase):
     def __init__(

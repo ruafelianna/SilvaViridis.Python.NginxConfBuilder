@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_KEEPALIVE_TIME
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup, TimeIntervalUnit
+
+DIR_KEEPALIVE_TIME = "keepalive_time"
 
 class KeepaliveTime(DirectiveBase):
     def __init__(

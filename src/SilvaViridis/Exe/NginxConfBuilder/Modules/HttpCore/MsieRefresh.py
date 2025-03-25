@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_MSIE_REFRESH
 from ...Common import DirectiveBase, OnOff
+
+DIR_MSIE_REFRESH = "msie_refresh"
 
 class MsieRefresh(DirectiveBase):
     def __init__(

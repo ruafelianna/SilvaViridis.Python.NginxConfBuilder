@@ -1,7 +1,8 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_LINGERING_CLOSE
 from ...Common import DirectiveBase, OnOff
+
+DIR_LINGERING_CLOSE = "lingering_close"
 
 class LingeringClose(DirectiveBase):
     def __init__(

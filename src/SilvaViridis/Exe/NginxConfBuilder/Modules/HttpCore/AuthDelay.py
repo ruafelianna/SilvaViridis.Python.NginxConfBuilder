@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_AUTH_DELAY
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_AUTH_DELAY = "auth_delay"
 
 class AuthDelay(DirectiveBase):
     def __init__(

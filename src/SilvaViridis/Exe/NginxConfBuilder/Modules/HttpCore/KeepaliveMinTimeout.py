@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_KEEPALIVE_MIN_TIMEOUT
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_KEEPALIVE_MIN_TIMEOUT = "keepalive_min_timeout"
 
 class KeepaliveMinTimeout(DirectiveBase):
     def __init__(

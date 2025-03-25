@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_AUTH_JWT_LEEWAY
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_AUTH_JWT_LEEWAY = "auth_jwt_leeway"
 
 class AuthJwtLeeway(DirectiveBase):
     def __init__(

@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_INTERNAL
 from ...Common import DirectiveBase
+
+DIR_INTERNAL = "internal"
 
 class Internal(DirectiveBase):
     def __init__(

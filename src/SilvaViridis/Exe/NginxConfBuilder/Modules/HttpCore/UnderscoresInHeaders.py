@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_UNDERSCORES_IN_HEADERS
 from ...Common import DirectiveBase, OnOff
+
+DIR_UNDERSCORES_IN_HEADERS = "underscores_in_headers"
 
 class UnderscoresInHeaders(DirectiveBase):
     def __init__(

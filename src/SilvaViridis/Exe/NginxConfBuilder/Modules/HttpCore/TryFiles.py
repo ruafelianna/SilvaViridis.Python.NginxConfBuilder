@@ -1,8 +1,9 @@
 from SilvaViridis.Python.Common.Types import NonEmptySequence
 from SilvaViridis.Python.Common.Web import HttpStatus
 
-from ._DirectivesList import DIR_TRY_FILES
 from ...Common import DirectiveBase, Path
+
+DIR_TRY_FILES = "try_files"
 
 class TryFiles(DirectiveBase):
     def __init__(

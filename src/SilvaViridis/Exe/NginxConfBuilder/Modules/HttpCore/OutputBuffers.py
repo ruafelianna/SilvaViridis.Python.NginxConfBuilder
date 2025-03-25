@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import PositiveInt
 
-from ._DirectivesList import DIR_OUTPUT_BUFFERS
 from ...Common import DirectiveBase, Size, SizeUnit
+
+DIR_OUTPUT_BUFFERS = "output_buffers"
 
 class OutputBuffers(DirectiveBase):
     def __init__(

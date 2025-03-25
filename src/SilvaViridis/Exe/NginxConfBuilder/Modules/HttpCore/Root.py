@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_ROOT
 from ...Common import DirectiveBase, Path
+
+DIR_ROOT = "root"
 
 class Root(DirectiveBase):
     def __init__(

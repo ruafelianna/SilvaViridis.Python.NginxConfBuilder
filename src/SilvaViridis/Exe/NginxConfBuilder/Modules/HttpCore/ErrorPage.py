@@ -3,8 +3,9 @@ from typing import Literal
 from SilvaViridis.Python.Common.Types import NonEmptySequence
 from SilvaViridis.Python.Common.Web import HttpStatus
 
-from ._DirectivesList import DIR_ERROR_PAGE
 from ...Common import DirectiveBase, Path
+
+DIR_ERROR_PAGE = "error_page"
 
 class ErrorPage(DirectiveBase):
     def __init__(

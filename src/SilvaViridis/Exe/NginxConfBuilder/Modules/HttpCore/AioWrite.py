@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_AIO_WRITE
 from ...Common import DirectiveBase, OnOff
+
+DIR_AIO_WRITE = "aio_write"
 
 class AioWrite(DirectiveBase):
     def __init__(

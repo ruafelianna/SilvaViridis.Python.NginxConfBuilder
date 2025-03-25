@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import PositiveInt
 
-from ._DirectivesList import DIR_LARGE_CLIENT_HEADER_BUFFERS
 from ...Common import DirectiveBase, Size, SizeUnit
+
+DIR_LARGE_CLIENT_HEADER_BUFFERS = "large_client_header_buffers"
 
 class LargeClientHeaderBuffers(DirectiveBase):
     def __init__(

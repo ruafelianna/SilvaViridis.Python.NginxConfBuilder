@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SEND_TIMEOUT
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_SEND_TIMEOUT = "send_timeout"
 
 class SendTimeout(DirectiveBase):
     def __init__(

@@ -2,8 +2,9 @@ from typing import Literal
 
 from SilvaViridis.Python.Common.Types import PositiveInt
 
-from ._DirectivesList import DIR_WORKER_PROCESSES
 from ...Common import DirectiveBase
+
+DIR_WORKER_PROCESSES = "worker_processes"
 
 class WorkerProcesses(DirectiveBase):
     def __init__(

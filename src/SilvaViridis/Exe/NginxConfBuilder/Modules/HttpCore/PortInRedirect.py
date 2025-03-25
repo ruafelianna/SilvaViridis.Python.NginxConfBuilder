@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_PORT_IN_REDIRECT
 from ...Common import DirectiveBase, OnOff
+
+DIR_PORT_IN_REDIRECT = "port_in_redirect"
 
 class PortInRedirect(DirectiveBase):
     def __init__(

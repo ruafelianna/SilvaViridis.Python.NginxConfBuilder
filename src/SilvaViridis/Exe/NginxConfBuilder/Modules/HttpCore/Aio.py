@@ -1,8 +1,9 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_AIO
 from ..Core import ThreadPool
 from ...Common import DirectiveBase, OnOff
+
+DIR_AIO = "aio"
 
 class Aio(DirectiveBase):
     def __init__(

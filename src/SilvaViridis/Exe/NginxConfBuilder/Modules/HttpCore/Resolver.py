@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import NonEmptySequence
 
-from ._DirectivesList import DIR_RESOLVER
 from ...Common import DirectiveBase, OnOff, Path, TimeInterval, TimeIntervalGroup, Zone
+
+DIR_RESOLVER = "resolver"
 
 class Resolver(DirectiveBase):
     def __init__(

@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_IGNORE_INVALID_HEADERS
 from ...Common import DirectiveBase, OnOff
+
+DIR_IGNORE_INVALID_HEADERS = "ignore_invalid_headers"
 
 class IgnoreInvalidHeaders(DirectiveBase):
     def __init__(

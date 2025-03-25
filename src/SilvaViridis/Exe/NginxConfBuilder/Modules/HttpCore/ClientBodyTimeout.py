@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_CLIENT_BODY_TIMEOUT
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_CLIENT_BODY_TIMEOUT = "client_body_timeout"
 
 class ClientBodyTimeout(DirectiveBase):
     def __init__(

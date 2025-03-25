@@ -2,8 +2,9 @@ from typing import Literal
 
 from SilvaViridis.Python.Common.Types import NonEmptySequence
 
-from ._DirectivesList import DIR_SERVER_NAME
 from ...Common import DirectiveBase, Path
+
+DIR_SERVER_NAME = "server_name"
 
 class ServerName(DirectiveBase):
     def __init__(

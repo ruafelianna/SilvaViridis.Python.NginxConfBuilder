@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_INCLUDE
 from ...Common import DirectiveBase, Path
+
+DIR_INCLUDE = "include"
 
 class Include(DirectiveBase):
     def __init__(

@@ -1,10 +1,5 @@
-from .Allow import Allow
-from .Deny import Deny
-
-from ._DirectivesList import (
-    DIR_ALLOW,
-    DIR_DENY,
-)
+from .Allow import DIR_ALLOW, Allow
+from .Deny import DIR_DENY, Deny
 
 __all__ = [
     "Allow",

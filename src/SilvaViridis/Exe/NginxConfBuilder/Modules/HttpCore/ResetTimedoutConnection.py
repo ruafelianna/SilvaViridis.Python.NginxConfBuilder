@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_RESET_TIMEDOUT_CONNECTION
 from ...Common import DirectiveBase, OnOff
+
+DIR_RESET_TIMEDOUT_CONNECTION = "reset_timedout_connection"
 
 class ResetTimedoutConnection(DirectiveBase):
     def __init__(

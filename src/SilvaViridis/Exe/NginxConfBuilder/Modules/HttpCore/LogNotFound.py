@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_LOG_NOT_FOUND
 from ...Common import DirectiveBase, OnOff
+
+DIR_LOG_NOT_FOUND = "log_not_found"
 
 class LogNotFound(DirectiveBase):
     def __init__(

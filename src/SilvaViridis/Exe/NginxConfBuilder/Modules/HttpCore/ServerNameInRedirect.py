@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SERVER_NAME_IN_REDIRECT
 from ...Common import DirectiveBase, OnOff
+
+DIR_SERVER_NAME_IN_REDIRECT = "server_name_in_redirect"
 
 class ServerNameInRedirect(DirectiveBase):
     def __init__(

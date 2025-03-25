@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_AUTH_JWT_KEY_CACHE
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_AUTH_JWT_KEY_CACHE = "auth_jwt_key_cache"
 
 class AuthJwtKeyCache(DirectiveBase):
     def __init__(

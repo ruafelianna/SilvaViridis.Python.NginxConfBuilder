@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_MSIE_PADDING
 from ...Common import DirectiveBase, OnOff
+
+DIR_MSIE_PADDING = "msie_padding"
 
 class MsiePadding(DirectiveBase):
     def __init__(

@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_AUTH_JWT_TYPE
 from ...Common import DirectiveBase, JSWType
+
+DIR_AUTH_JWT_TYPE = "auth_jwt_type"
 
 class AuthJwtType(DirectiveBase):
     def __init__(

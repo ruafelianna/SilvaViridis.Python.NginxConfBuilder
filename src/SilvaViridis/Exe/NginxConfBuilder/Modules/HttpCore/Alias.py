@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_ALIAS
 from ...Common import DirectiveBase, Path
+
+DIR_ALIAS = "alias"
 
 class Alias(DirectiveBase):
     def __init__(

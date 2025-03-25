@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_CLIENT_BODY_IN_SINGLE_BUFFER
 from ...Common import DirectiveBase, OnOff
+
+DIR_CLIENT_BODY_IN_SINGLE_BUFFER = "client_body_in_single_buffer"
 
 class ClientBodyInSingleBuffer(DirectiveBase):
     def __init__(

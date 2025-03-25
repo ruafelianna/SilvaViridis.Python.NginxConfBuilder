@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import NonEmptyString
 
-from ._DirectivesList import DIR_USER
 from ...Common import DirectiveBase
+
+DIR_USER = "user"
 
 class User(DirectiveBase):
     def __init__(

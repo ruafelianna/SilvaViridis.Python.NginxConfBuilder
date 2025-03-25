@@ -2,8 +2,9 @@ from typing import Literal
 
 from SilvaViridis.Python.Common.Types import PositiveInt
 
-from ._DirectivesList import DIR_OPEN_FILE_CACHE
 from ...Common import DirectiveBase, OnOff, TimeInterval, TimeIntervalGroup
+
+DIR_OPEN_FILE_CACHE = "open_file_cache"
 
 class OpenFileCache(DirectiveBase):
     def __init__(

@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_LINGERING_TIMEOUT
 from ...Common import DirectiveBase, TimeInterval, TimeIntervalGroup
+
+DIR_LINGERING_TIMEOUT = "lingering_timeout"
 
 class LingeringTimeout(DirectiveBase):
     def __init__(

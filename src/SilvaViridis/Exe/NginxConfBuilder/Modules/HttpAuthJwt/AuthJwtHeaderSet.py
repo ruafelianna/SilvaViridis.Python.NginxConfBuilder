@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import NonEmptySequence, NonEmptyString
 
-from ._DirectivesList import DIR_AUTH_JWT_HEADER_SET
 from ...Common import DirectiveBase, Variable
+
+DIR_AUTH_JWT_HEADER_SET = "auth_jwt_header_set"
 
 class AuthJwtHeaderSet(DirectiveBase):
     def __init__(

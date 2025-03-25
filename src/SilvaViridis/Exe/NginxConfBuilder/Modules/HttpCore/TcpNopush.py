@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_TCP_NOPUSH
 from ...Common import DirectiveBase, OnOff
+
+DIR_TCP_NOPUSH = "tcp_nopush"
 
 class TcpNopush(DirectiveBase):
     def __init__(

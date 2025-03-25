@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_TYPES_HASH_MAX_SIZE
 from ...Common import DirectiveBase, Size
+
+DIR_TYPES_HASH_MAX_SIZE = "types_hash_max_size"
 
 class TypesHashMaxSize(DirectiveBase):
     def __init__(

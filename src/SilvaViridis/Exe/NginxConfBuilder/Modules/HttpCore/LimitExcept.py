@@ -3,11 +3,12 @@ from collections.abc import Sequence
 from SilvaViridis.Python.Common.Types import NonEmptySequence
 from SilvaViridis.Python.Common.Web import HttpMethod
 
-from ._DirectivesList import DIR_LIMIT_EXCEPT
 from ..HttpAccess import Allow, Deny
 from ..HttpAuthBasic import AuthBasic, AuthBasicUserFile
 from ..HttpAuthJwt import AuthJwt, AuthJwtKeyFile, AuthJwtKeyRequest, AuthJwtType, AuthJwtRequire
 from ...Common import DirectiveBase
+
+DIR_LIMIT_EXCEPT = "limit_except"
 
 type AccessDirective = Allow | Deny | AuthBasic | AuthBasicUserFile | AuthJwt | AuthJwtKeyFile | AuthJwtKeyRequest | AuthJwtType | AuthJwtRequire
 

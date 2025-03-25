@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_ETAG
 from ...Common import DirectiveBase, OnOff
+
+DIR_ETAG = "etag"
 
 class Etag(DirectiveBase):
     def __init__(

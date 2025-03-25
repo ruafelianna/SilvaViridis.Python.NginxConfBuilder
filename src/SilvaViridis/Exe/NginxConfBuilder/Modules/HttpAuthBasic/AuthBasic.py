@@ -2,8 +2,9 @@ from typing import Literal
 
 from SilvaViridis.Python.Common.Types import NonEmptyString
 
-from ._DirectivesList import DIR_AUTH_BASIC
 from ...Common import DirectiveBase, OnOff
+
+DIR_AUTH_BASIC = "auth_basic"
 
 class AuthBasic(DirectiveBase):
     def __init__(

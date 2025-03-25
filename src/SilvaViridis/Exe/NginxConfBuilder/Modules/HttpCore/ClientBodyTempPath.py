@@ -3,8 +3,9 @@ from typing import Annotated, Literal
 
 from SilvaViridis.Python.Common.Types import NonEmptySequence
 
-from ._DirectivesList import DIR_CLIENT_BODY_TEMP_PATH
 from ...Common import DirectiveBase, Path
+
+DIR_CLIENT_BODY_TEMP_PATH = "client_body_temp_path"
 
 type NonEmpty123Sequence = NonEmptySequence[Literal[1, 2, 3]]
 

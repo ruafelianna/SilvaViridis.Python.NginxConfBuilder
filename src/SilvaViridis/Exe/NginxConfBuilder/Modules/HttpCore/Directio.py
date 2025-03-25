@@ -1,7 +1,8 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_DIRECTIO
 from ...Common import DirectiveBase, OnOff, Size
+
+DIR_DIRECTIO = "directio"
 
 class Directio(DirectiveBase):
     def __init__(

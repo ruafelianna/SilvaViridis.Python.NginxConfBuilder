@@ -1,6 +1,5 @@
 from collections.abc import Sequence
 
-from ._DirectivesList import DIR_SERVER
 from .AbsoluteRedirect import AbsoluteRedirect
 from .Aio import Aio
 from .AioWrite import AioWrite
@@ -72,11 +71,15 @@ from .Types import Types
 from .TypesHashBucketSize import TypesHashBucketSize
 from .TypesHashMaxSize import TypesHashMaxSize
 from .UnderscoresInHeaders import UnderscoresInHeaders
+
 from ..Core import (
     ErrorLog,
     Include,
 )
+
 from ...Common import DirectiveBase
+
+DIR_SERVER = "server"
 
 class Server(DirectiveBase):
     def __init__(

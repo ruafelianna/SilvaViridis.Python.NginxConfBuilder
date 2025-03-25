@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SERVER_NAMES_HASH_BUCKET_SIZE
 from ...Common import DirectiveBase, Size
+
+DIR_SERVER_NAMES_HASH_BUCKET_SIZE = "server_names_hash_bucket_size"
 
 class ServerNamesHashBucketSize(DirectiveBase):
     def __init__(

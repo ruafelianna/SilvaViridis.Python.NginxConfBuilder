@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_VARIABLES_HASH_MAX_SIZE
 from ...Common import DirectiveBase, Size
+
+DIR_VARIABLES_HASH_MAX_SIZE = "variables_hash_max_size"
 
 class VariablesHashMaxSize(DirectiveBase):
     def __init__(

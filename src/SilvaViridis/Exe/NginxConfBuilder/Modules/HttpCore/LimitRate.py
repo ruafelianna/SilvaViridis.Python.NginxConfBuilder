@@ -1,7 +1,8 @@
 from SilvaViridis.Python.Common.Types import PositiveInt
 
-from ._DirectivesList import DIR_LIMIT_RATE
 from ...Common import DirectiveBase, Variable
+
+DIR_LIMIT_RATE = "limit_rate"
 
 class LimitRate(DirectiveBase):
     def __init__(

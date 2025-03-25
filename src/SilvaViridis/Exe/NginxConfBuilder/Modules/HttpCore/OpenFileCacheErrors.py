@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_OPEN_FILE_CACHE_ERRORS
 from ...Common import DirectiveBase, OnOff
+
+DIR_OPEN_FILE_CACHE_ERRORS = "open_file_cache_errors"
 
 class OpenFileCacheErrors(DirectiveBase):
     def __init__(

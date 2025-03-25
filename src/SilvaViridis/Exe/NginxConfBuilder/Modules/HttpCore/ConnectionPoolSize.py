@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_CONNECTION_POOL_SIZE
 from ...Common import DirectiveBase, Size
+
+DIR_CONNECTION_POOL_SIZE = "connection_pool_size"
 
 class ConnectionPoolSize(DirectiveBase):
     def __init__(

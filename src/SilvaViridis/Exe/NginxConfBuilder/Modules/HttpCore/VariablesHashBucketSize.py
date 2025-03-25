@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_VARIABLES_HASH_BUCKET_SIZE
 from ...Common import DirectiveBase, Size
+
+DIR_VARIABLES_HASH_BUCKET_SIZE = "variables_hash_bucket_size"
 
 class VariablesHashBucketSize(DirectiveBase):
     def __init__(

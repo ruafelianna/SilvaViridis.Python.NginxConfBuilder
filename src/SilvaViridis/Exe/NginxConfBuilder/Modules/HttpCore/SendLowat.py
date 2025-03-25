@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_SEND_LOWAT
 from ...Common import DirectiveBase, Size
+
+DIR_SEND_LOWAT = "send_lowat"
 
 class SendLowat(DirectiveBase):
     def __init__(

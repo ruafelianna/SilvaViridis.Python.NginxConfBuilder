@@ -1,7 +1,8 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_DENY
 from ...Common import Access, DirectiveBase, Path
+
+DIR_DENY = "deny"
 
 class Deny(DirectiveBase):
     def __init__(

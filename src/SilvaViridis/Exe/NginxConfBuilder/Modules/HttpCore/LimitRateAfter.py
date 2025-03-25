@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_LIMIT_RATE_AFTER
 from ...Common import DirectiveBase, Size, Variable
+
+DIR_LIMIT_RATE_AFTER = "limit_rate_after"
 
 class LimitRateAfter(DirectiveBase):
     def __init__(

@@ -1,5 +1,6 @@
-from ._DirectivesList import DIR_PID
 from ...Common import DirectiveBase, Path
+
+DIR_PID = "pid"
 
 class Pid(DirectiveBase):
     def __init__(

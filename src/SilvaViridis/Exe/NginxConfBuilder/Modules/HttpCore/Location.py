@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 
-from ._DirectivesList import DIR_LOCATION
 from .AbsoluteRedirect import AbsoluteRedirect
 from .Aio import Aio
 from .AioWrite import AioWrite
@@ -66,11 +65,15 @@ from .TryFiles import TryFiles
 from .Types import Types
 from .TypesHashBucketSize import TypesHashBucketSize
 from .TypesHashMaxSize import TypesHashMaxSize
+
 from ..Core import (
     ErrorLog,
     Include,
 )
+
 from ...Common import DirectiveBase
+
+DIR_LOCATION = "location"
 
 class Location(DirectiveBase):
     def __init__(

@@ -2,8 +2,9 @@ from typing import Literal
 
 from SilvaViridis.Python.Common.Types import NonEmptyString
 
-from ._DirectivesList import DIR_AUTH_JWT
 from ...Common import DirectiveBase, OnOff, Variable
+
+DIR_AUTH_JWT = "auth_jwt"
 
 class AuthJwt(DirectiveBase):
     def __init__(

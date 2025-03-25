@@ -1,7 +1,8 @@
 from typing import Literal
 
-from ._DirectivesList import DIR_ALLOW
 from ...Common import Access, DirectiveBase, Path
+
+DIR_ALLOW = "allow"
 
 class Allow(DirectiveBase):
     def __init__(
