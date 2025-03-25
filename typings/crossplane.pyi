@@ -1,6 +1,6 @@
 from collections.abc import Sequence
 
-from src.SilvaViridis.Python.NginxConfBuilder.Common import DirectiveDict
+from SilvaViridis.Python.NginxConfBuilder.Common import DirectiveDict
 
 def build(
     payload : Sequence[DirectiveDict],
