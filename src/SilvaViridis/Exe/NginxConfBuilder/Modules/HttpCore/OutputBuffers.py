@@ -7,9 +7,10 @@ DIR_OUTPUT_BUFFERS = "output_buffers"
 class OutputBuffers(DirectiveBase):
     def __init__(
         self,
+        order : int,
         quantity : PositiveInt = 2,
         size : Size = Size(32, SizeUnit.kilobytes),
     ):
-        super().__init__(DIR_OUTPUT_BUFFERS)
+        super().__init__(order, DIR_OUTPUT_BUFFERS)
         self.add_arg(quantity)
         self.add_arg(size)

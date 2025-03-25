@@ -6,6 +6,8 @@ from ..Common import (
     DirectiveDict,
 )
 
+from ..Modules import MainContext
+
 class GeneratorBase(ABC):
     def __init__(
         self,
@@ -17,10 +19,11 @@ class GeneratorBase(ABC):
         self,
         directive : DirectiveBase,
     ) -> str:
-        return self._to_str((directive.build(),))
-
-    def build_many(
-        self,
-        directives : Sequence[DirectiveBase],
-    ) -> str:
-        return self._to_str(tuple((d.build() for d in directives)))
+        result = directive.build()
+        if isinstance(directive, MainContext):
+            if "block" in result:
+                return self._to_str(result["block"])
+            else:
+                raise ValueError("Main context is empty!")
+        else:
+            return self._to_str((result,))

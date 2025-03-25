@@ -15,10 +15,11 @@ type AccessDirective = Allow | Deny | AuthBasic | AuthBasicUserFile | AuthJwt | 
 class LimitExcept(DirectiveBase):
     def __init__(
         self,
+        order : int,
         methods : NonEmptySequence[HttpMethod],
         access_list : Sequence[AccessDirective] = [],
     ):
-        super().__init__(DIR_LIMIT_EXCEPT)
+        super().__init__(order, DIR_LIMIT_EXCEPT)
 
         for method in methods:
             self.add_arg(method.name)

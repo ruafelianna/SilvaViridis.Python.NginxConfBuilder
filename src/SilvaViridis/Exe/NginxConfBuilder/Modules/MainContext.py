@@ -22,7 +22,7 @@ class MainContext(DirectiveBase):
         user : User | None = None,
         worker_processes : WorkerProcesses | None = None,
     ):
-        super().__init__("main")
+        super().__init__(0, "main")
         self.add_directive(error_log)
 
         for include in include_list:

@@ -11,11 +11,12 @@ DIR_AUTH_JWT_REQUIRE = "auth_jwt_require"
 class AuthJwtRequire(DirectiveBase):
     def __init__(
         self,
+        order : int,
         variable : Variable,
         values : Sequence[NonEmptyString | Variable] = [],
         error : Literal[HttpStatus.Unauthorized, HttpStatus.Forbidden] | None = None,
     ):
-        super().__init__(DIR_AUTH_JWT_REQUIRE)
+        super().__init__(order, DIR_AUTH_JWT_REQUIRE)
         self.add_arg(variable)
 
         for value in values:

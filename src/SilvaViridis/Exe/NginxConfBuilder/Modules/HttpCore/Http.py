@@ -85,6 +85,7 @@ DIR_HTTP = "http"
 class Http(DirectiveBase):
     def __init__(
         self,
+        order : int,
         absolute_redirect : AbsoluteRedirect | None = None,
         aio : Aio | None = None,
         aio_write : AioWrite | None = None,
@@ -160,7 +161,7 @@ class Http(DirectiveBase):
         variables_hash_bucket_size : VariablesHashBucketSize | None = None,
         variables_hash_max_size : VariablesHashMaxSize | None = None,
     ):
-        super().__init__(DIR_HTTP)
+        super().__init__(order, DIR_HTTP)
         self.add_directive(absolute_redirect)
         self.add_directive(aio)
         self.add_directive(aio_write)

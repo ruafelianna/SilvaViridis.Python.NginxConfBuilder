@@ -78,6 +78,7 @@ DIR_LOCATION = "location"
 class Location(DirectiveBase):
     def __init__(
         self,
+        order : int,
         absolute_redirect : AbsoluteRedirect | None = None,
         aio : Aio | None = None,
         aio_write : AioWrite | None = None,
@@ -145,7 +146,7 @@ class Location(DirectiveBase):
         types_hash_bucket_size : TypesHashBucketSize | None = None,
         types_hash_max_size : TypesHashMaxSize | None = None,
     ):
-        super().__init__(DIR_LOCATION)
+        super().__init__(order, DIR_LOCATION)
         self.add_directive(absolute_redirect)
         self.add_directive(aio)
         self.add_directive(aio_write)

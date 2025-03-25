@@ -14,6 +14,7 @@ type KeepCnt = int | None
 class Listen(DirectiveBase):
     def __init__(
         self,
+        order : int,
         address : Path | None = None,
         port : UInt16 | None = None,
         unix_socket : Path | None = None,
@@ -34,7 +35,7 @@ class Listen(DirectiveBase):
         reuseport : bool = False,
         so_keepalive : OnOff | tuple[KeepIdle, KeepIntvl, KeepCnt] | None = None,
     ):
-        super().__init__(DIR_LISTEN)
+        super().__init__(order, DIR_LISTEN)
 
         if unix_socket is not None and (address is not None or port is not None):
             raise ValueError("`unix_socket` cannot be combined with `address` or `port`")

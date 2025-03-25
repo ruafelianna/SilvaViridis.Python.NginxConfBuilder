@@ -7,7 +7,8 @@ DIR_ALLOW = "allow"
 class Allow(DirectiveBase):
     def __init__(
         self,
+        order : int,
         state : Path | Literal[Access.all],
     ):
-        super().__init__(DIR_ALLOW)
+        super().__init__(order, DIR_ALLOW)
         self.add_arg(state)

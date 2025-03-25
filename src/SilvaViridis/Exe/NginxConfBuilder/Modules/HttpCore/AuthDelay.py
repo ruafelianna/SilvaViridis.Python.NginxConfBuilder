@@ -5,9 +5,10 @@ DIR_AUTH_DELAY = "auth_delay"
 class AuthDelay(DirectiveBase):
     def __init__(
         self,
+        order : int,
         time : TimeInterval | TimeIntervalGroup = TimeInterval(0),
     ):
-        super().__init__(DIR_AUTH_DELAY)
+        super().__init__(order, DIR_AUTH_DELAY)
         self.add_arg(time)
 
     @property

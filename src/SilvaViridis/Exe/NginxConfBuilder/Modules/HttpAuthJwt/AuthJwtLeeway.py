@@ -5,9 +5,10 @@ DIR_AUTH_JWT_LEEWAY = "auth_jwt_leeway"
 class AuthJwtLeeway(DirectiveBase):
     def __init__(
         self,
+        order : int,
         time : TimeInterval | TimeIntervalGroup = TimeInterval(0),
     ):
-        super().__init__(DIR_AUTH_JWT_LEEWAY)
+        super().__init__(order, DIR_AUTH_JWT_LEEWAY)
         self.add_arg(time)
 
     @property

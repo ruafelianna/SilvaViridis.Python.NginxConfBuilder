@@ -9,10 +9,11 @@ DIR_AUTH_JWT = "auth_jwt"
 class AuthJwt(DirectiveBase):
     def __init__(
         self,
+        order : int,
         realm : NonEmptyString | Literal[OnOff.off] = OnOff.off,
         token : Variable | None = None,
     ):
-        super().__init__(DIR_AUTH_JWT)
+        super().__init__(order, DIR_AUTH_JWT)
 
         if isinstance(realm, OnOff):
             self.add_arg(realm)

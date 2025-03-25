@@ -17,10 +17,11 @@ def _is_1_2_3(
 class ClientBodyTempPath(DirectiveBase):
     def __init__(
         self,
+        order : int,
         path : Path = Path("client_body_temp"),
         levels : Annotated[NonEmpty123Sequence, Is[_is_1_2_3]] | None = None,
     ):
-        super().__init__(DIR_CLIENT_BODY_TEMP_PATH)
+        super().__init__(order, DIR_CLIENT_BODY_TEMP_PATH)
         self.add_arg(path)
 
         if levels is not None:

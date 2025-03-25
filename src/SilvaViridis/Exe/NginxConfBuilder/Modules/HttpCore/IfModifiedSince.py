@@ -7,9 +7,10 @@ DIR_IF_MODIFIED_SINCE = "if_modified_since"
 class IfModifiedSince(DirectiveBase):
     def __init__(
         self,
+        order : int,
         state : Literal[OnOff.off, "exact", "before"] = "exact",
     ):
-        super().__init__(DIR_IF_MODIFIED_SINCE)
+        super().__init__(order, DIR_IF_MODIFIED_SINCE)
         self.add_arg(state)
 
     @property

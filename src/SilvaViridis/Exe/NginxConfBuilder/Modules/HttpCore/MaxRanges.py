@@ -7,9 +7,10 @@ DIR_MAX_RANGES = "max_ranges"
 class MaxRanges(DirectiveBase):
     def __init__(
         self,
+        order : int,
         quantity : PositiveInt | None = None,
     ):
-        super().__init__(DIR_MAX_RANGES)
+        super().__init__(order, DIR_MAX_RANGES)
         self.add_arg(0 if quantity is None else quantity)
 
     @property

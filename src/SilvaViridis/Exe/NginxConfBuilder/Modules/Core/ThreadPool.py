@@ -17,11 +17,12 @@ type PositiveInt16Plus1 = Annotated[PositiveInt, Is[_is_less_than_2_16]]
 class ThreadPool(DirectiveBase):
     def __init__(
         self,
+        order : int,
         name : NonEmptyString = "default",
         threads : PositiveInt = 32,
         max_queue : PositiveInt16Plus1 | None = 65536,
     ):
-        super().__init__(DIR_THREAD_POOL)
+        super().__init__(order, DIR_THREAD_POOL)
         self.add_arg(name)
         self.add_arg(threads, "threads=")
         self.add_arg(max_queue, "max_queue=")

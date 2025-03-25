@@ -5,7 +5,8 @@ DIR_INCLUDE = "include"
 class Include(DirectiveBase):
     def __init__(
         self,
+        order : int,
         file : Path,
     ):
-        super().__init__(DIR_INCLUDE)
+        super().__init__(order, DIR_INCLUDE)
         self.add_arg(file)

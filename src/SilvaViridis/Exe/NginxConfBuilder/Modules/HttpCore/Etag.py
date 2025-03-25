@@ -5,9 +5,10 @@ DIR_ETAG = "etag"
 class Etag(DirectiveBase):
     def __init__(
         self,
+        order : int,
         state : OnOff = OnOff.on,
     ):
-        super().__init__(DIR_ETAG)
+        super().__init__(order, DIR_ETAG)
         self.add_arg(state)
 
     @property

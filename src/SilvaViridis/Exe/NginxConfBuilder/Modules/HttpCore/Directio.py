@@ -7,9 +7,10 @@ DIR_DIRECTIO = "directio"
 class Directio(DirectiveBase):
     def __init__(
         self,
+        order : int,
         state : Size | Literal[OnOff.off] = OnOff.off,
     ):
-        super().__init__(DIR_DIRECTIO)
+        super().__init__(order, DIR_DIRECTIO)
         self.add_arg(state)
 
     @property

@@ -15,10 +15,12 @@ from .DirectiveDict import DirectiveDict
 class DirectiveBase(ABC):
     def __init__(
         self,
+        order : int,
         name : NonEmptyString,
         args : Sequence[NonEmptyString] = [],
         block : Sequence[DirectiveBase | None] = [],
     ):
+        self._order = order
         self._name : str
         self.change_name(name)
         self._args : list[str] = list(args)
@@ -94,8 +96,14 @@ class DirectiveBase(ABC):
             "args": self.args,
         }
 
+        def sort_directives(directive : DirectiveBase) -> int:
+            return directive._order
+
+        directives = [b for b in self.block if b]
+        directives = sorted(directives, key = sort_directives)
+
         if len(self.block) > 0:
-            result["block"] = [b.build() for b in self.block if b]
+            result["block"] = [d.build() for d in directives]
 
         return result
 

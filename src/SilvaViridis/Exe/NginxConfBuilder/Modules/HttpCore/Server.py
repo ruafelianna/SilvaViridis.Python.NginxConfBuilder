@@ -84,6 +84,7 @@ DIR_SERVER = "server"
 class Server(DirectiveBase):
     def __init__(
         self,
+        order : int,
         absolute_redirect : AbsoluteRedirect | None = None,
         aio : Aio | None = None,
         aio_write : AioWrite | None = None,
@@ -158,7 +159,7 @@ class Server(DirectiveBase):
         types_hash_max_size : TypesHashMaxSize | None = None,
         underscores_in_headers : UnderscoresInHeaders | None = None,
     ):
-        super().__init__(DIR_SERVER)
+        super().__init__(order, DIR_SERVER)
         self.add_directive(absolute_redirect)
         self.add_directive(aio)
         self.add_directive(aio_write)

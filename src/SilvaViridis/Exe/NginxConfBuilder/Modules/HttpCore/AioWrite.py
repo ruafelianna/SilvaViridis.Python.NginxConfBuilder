@@ -5,9 +5,10 @@ DIR_AIO_WRITE = "aio_write"
 class AioWrite(DirectiveBase):
     def __init__(
         self,
+        order : int,
         state : OnOff = OnOff.off,
     ):
-        super().__init__(DIR_AIO_WRITE)
+        super().__init__(order, DIR_AIO_WRITE)
         self.add_arg(state)
 
     @property

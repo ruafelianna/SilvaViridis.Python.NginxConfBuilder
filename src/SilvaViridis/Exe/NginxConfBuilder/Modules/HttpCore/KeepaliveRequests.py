@@ -7,9 +7,10 @@ DIR_KEEPALIVE_REQUESTS = "keepalive_requests"
 class KeepaliveRequests(DirectiveBase):
     def __init__(
         self,
+        order : int,
         quantity : PositiveInt = 1000,
     ):
-        super().__init__(DIR_KEEPALIVE_REQUESTS)
+        super().__init__(order, DIR_KEEPALIVE_REQUESTS)
         self.add_arg(quantity)
 
     @property

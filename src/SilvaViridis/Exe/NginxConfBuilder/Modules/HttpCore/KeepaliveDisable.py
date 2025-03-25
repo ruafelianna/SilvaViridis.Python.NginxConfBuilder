@@ -9,9 +9,10 @@ DIR_KEEPALIVE_DISABLE = "keepalive_disable"
 class KeepaliveDisable(DirectiveBase):
     def __init__(
         self,
+        order : int,
         browsers : NonEmptySequence[Literal["msie6", "safari"]] | None = ["msie6"],
     ):
-        super().__init__(DIR_KEEPALIVE_DISABLE)
+        super().__init__(order, DIR_KEEPALIVE_DISABLE)
 
         if browsers is None:
             self.add_arg("none")

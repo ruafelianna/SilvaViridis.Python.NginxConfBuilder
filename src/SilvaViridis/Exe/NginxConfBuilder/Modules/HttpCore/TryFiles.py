@@ -8,10 +8,11 @@ DIR_TRY_FILES = "try_files"
 class TryFiles(DirectiveBase):
     def __init__(
         self,
+        order : int,
         files : NonEmptySequence[Path],
         finish : Path | HttpStatus,
     ):
-        super().__init__(DIR_TRY_FILES)
+        super().__init__(order, DIR_TRY_FILES)
 
         for file in files:
             self.add_arg(file)

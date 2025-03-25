@@ -8,10 +8,11 @@ DIR_AIO = "aio"
 class Aio(DirectiveBase):
     def __init__(
         self,
+        order : int,
         state : OnOff | Literal["threads"] = OnOff.off,
         pool : ThreadPool | None = None,
     ):
-        super().__init__(DIR_AIO)
+        super().__init__(order, DIR_AIO)
 
         if isinstance(state, OnOff):
             self.add_arg(state)
