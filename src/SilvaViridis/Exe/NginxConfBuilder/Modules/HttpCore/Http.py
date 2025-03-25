@@ -84,6 +84,7 @@ from ..HttpGzip import (
 
 from ..HttpLog import (
     AccessLog,
+    LogFormat,
 )
 
 from ..HttpSsl import (
@@ -136,6 +137,7 @@ class Http(DirectiveBase):
         lingering_close : LingeringClose | None = None,
         lingering_time : LingeringTime | None = None,
         lingering_timeout : LingeringTimeout | None = None,
+        log_format : LogFormat | None = None,
         log_not_found : LogNotFound | None = None,
         log_subrequest : LogSubrequest | None = None,
         max_ranges : MaxRanges | None = None,
@@ -222,6 +224,7 @@ class Http(DirectiveBase):
         self.add_directive(lingering_close)
         self.add_directive(lingering_time)
         self.add_directive(lingering_timeout)
+        self.add_directive(log_format)
         self.add_directive(log_not_found)
         self.add_directive(log_subrequest)
         self.add_directive(max_ranges)
