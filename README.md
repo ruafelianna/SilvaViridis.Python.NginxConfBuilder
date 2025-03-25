@@ -1,12 +1,12 @@
-# SilvaViridis.Exe.NginxConfBuilder
+# SilvaViridis.Python.NginxConfBuilder
 
 A tool to create Nginx configuration files in an OOP manner.
 
 ### Usage:
 
 ```python
-from SilvaViridis.Exe.NginxConfBuilder.Defaults import get_docker_default_conf
-from SilvaViridis.Exe.NginxConfBuilder.Generators import CrossplaneGenerator
+from SilvaViridis.Python.NginxConfBuilder.Defaults import get_docker_default_conf
+from SilvaViridis.Python.NginxConfBuilder.Generators import CrossplaneGenerator
 
 conf = get_docker_default_conf()
 gen = CrossplaneGenerator()

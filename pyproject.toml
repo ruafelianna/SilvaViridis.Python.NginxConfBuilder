@@ -1,6 +1,6 @@
 [project]
-name = "SilvaViridis.Exe.NginxConfBuilder"
-version = "0.1.0"
+name = "SilvaViridis.Python.NginxConfBuilder"
+version = "0.1.1"
 description = "A tool to create Nginx configuration files in an OOP manner."
 authors = [
     {name = "Maria Sorokina", email = "ruafelianna@ya.ru"},
