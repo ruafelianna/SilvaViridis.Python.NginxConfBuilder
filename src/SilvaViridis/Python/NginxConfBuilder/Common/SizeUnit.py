@@ -1,6 +1,6 @@
 from SilvaViridis.Python.Common.Enums import (
     OrderedEnum,
-    OrderedEnumDictComparator,
+    OrderedEnumDecorators,
 )
 
 from SilvaViridis.Python.Common.Interfaces import IComparable
@@ -16,4 +16,4 @@ _order : dict[SizeUnit, IComparable] = {
     SizeUnit.megabytes: 2,
 }
 
-OrderedEnumDictComparator(_order)(SizeUnit)
+OrderedEnumDecorators.DictComparator(_order)(SizeUnit)

@@ -6,7 +6,7 @@ class TypesHashMaxSize(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size: Size = Size(1024),
+        size: Size = Size(value = 1024),
     ):
         super().__init__(order, DIR_TYPES_HASH_MAX_SIZE)
         self.add_arg(size)

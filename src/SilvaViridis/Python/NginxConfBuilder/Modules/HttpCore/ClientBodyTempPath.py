@@ -1,7 +1,7 @@
 from beartype.vale import Is
 from typing import Annotated, Literal
 
-from SilvaViridis.Python.Common.Types import NonEmptySequence
+from SilvaViridis.Python.Common.Collections import NonEmptySequence
 
 from ...Common import DirectiveBase, Path
 

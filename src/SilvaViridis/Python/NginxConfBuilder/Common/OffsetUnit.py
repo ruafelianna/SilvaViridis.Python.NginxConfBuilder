@@ -1,6 +1,6 @@
 from SilvaViridis.Python.Common.Enums import (
     OrderedEnum,
-    OrderedEnumDictComparator,
+    OrderedEnumDecorators,
 )
 
 from SilvaViridis.Python.Common.Interfaces import IComparable
@@ -18,4 +18,4 @@ _order : dict[OffsetUnit, IComparable] = {
     OffsetUnit.gigabytes: 3,
 }
 
-OrderedEnumDictComparator(_order)(OffsetUnit)
+OrderedEnumDecorators.DictComparator(_order)(OffsetUnit)

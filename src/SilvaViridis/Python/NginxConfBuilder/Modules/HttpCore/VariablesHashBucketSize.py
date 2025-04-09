@@ -6,7 +6,7 @@ class VariablesHashBucketSize(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size: Size = Size(64),
+        size: Size = Size(value = 64),
     ):
         super().__init__(order, DIR_VARIABLES_HASH_BUCKET_SIZE)
         self.add_arg(size)

@@ -6,7 +6,7 @@ from collections.abc import Callable, Sequence
 from enum import Enum
 
 from SilvaViridis.Python.Common.Enums import OrderedEnum
-from SilvaViridis.Python.Common.Types import NonEmptyString
+from SilvaViridis.Python.Common.Text import NonEmptyString
 from SilvaViridis.Python.Common.Web import HttpStatus, MimeType
 
 from .DirectiveDict import DirectiveDict

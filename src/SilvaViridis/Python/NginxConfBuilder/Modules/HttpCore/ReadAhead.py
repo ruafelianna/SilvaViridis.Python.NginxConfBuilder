@@ -6,7 +6,7 @@ class ReadAhead(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size: Size = Size(0),
+        size: Size = Size(value = 0),
     ):
         super().__init__(order, DIR_READ_AHEAD)
         self.add_arg(size)

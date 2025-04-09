@@ -1,6 +1,6 @@
 [project]
 name = "SilvaViridis.Python.NginxConfBuilder"
-version = "0.1.3"
+version = "0.1.4"
 description = "A tool to create Nginx configuration files in an OOP manner."
 authors = [
     {name = "Maria Sorokina", email = "ruafelianna@ya.ru"},
@@ -8,7 +8,7 @@ authors = [
 dependencies = [
     "beartype>=0.20",
     "crossplane==0.5.8",
-    "silvaviridis-python-common @ https://github.com/ruafelianna/SilvaViridis.Python.Common/releases/download/v0.7.1/silvaviridis_python_common-0.7.1-py3-none-any.whl",
+    "silvaviridis-python-common @ https://github.com/ruafelianna/SilvaViridis.Python.Common/releases/download/v0.9.0/silvaviridis_python_common-0.9.0-py3-none-any.whl",
 ]
 requires-python = ">=3.13"
 readme = "README.md"

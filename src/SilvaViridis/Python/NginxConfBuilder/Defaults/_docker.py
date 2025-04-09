@@ -104,7 +104,7 @@ def get_docker_default_conf(
             ),
             keepalive_timeout = KeepaliveTimeout(
                 order = 600,
-                time = TimeInterval(65),
+                time = TimeInterval(value = 65),
             ),
         ),
     )

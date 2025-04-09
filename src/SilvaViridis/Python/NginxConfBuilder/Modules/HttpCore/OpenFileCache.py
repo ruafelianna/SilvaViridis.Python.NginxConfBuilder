@@ -1,6 +1,6 @@
 from typing import Literal
 
-from SilvaViridis.Python.Common.Types import PositiveInt
+from SilvaViridis.Python.Common.Numbers import PositiveInt
 
 from ...Common import DirectiveBase, OnOff, TimeInterval, TimeIntervalGroup
 
@@ -19,4 +19,4 @@ class OpenFileCache(DirectiveBase):
             self.add_arg(state)
         else:
             self.add_arg(state, "max=")
-            self.add_arg(TimeInterval(60) if inactive is None else inactive)
+            self.add_arg(TimeInterval(value = 60) if inactive is None else inactive)

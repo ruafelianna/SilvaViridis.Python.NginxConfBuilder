@@ -6,7 +6,7 @@ class SubrequestOutputBufferSize(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size: Size = Size(8, SizeUnit.kilobytes),
+        size: Size = Size(value = 8, unit = SizeUnit.kilobytes),
     ):
         super().__init__(order, DIR_SUBREQUEST_OUTPUT_BUFFER_SIZE)
         self.add_arg(size)

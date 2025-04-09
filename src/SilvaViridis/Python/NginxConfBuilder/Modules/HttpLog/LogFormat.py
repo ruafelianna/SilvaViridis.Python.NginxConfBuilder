@@ -1,6 +1,7 @@
 from typing import Literal
 
-from SilvaViridis.Python.Common.Types import NonEmptyString, NonEmptySequence
+from SilvaViridis.Python.Common.Collections import NonEmptySequence
+from SilvaViridis.Python.Common.Text import NonEmptyString
 
 from ...Common import DirectiveBase
 

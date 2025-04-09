@@ -6,7 +6,7 @@ class LimitRateAfter(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size : Size | Variable = Size(0),
+        size : Size | Variable = Size(value = 0),
     ):
         super().__init__(order, DIR_LIMIT_RATE_AFTER)
         self.add_arg(size)

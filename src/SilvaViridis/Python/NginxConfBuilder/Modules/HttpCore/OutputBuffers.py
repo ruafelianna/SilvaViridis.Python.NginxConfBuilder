@@ -1,4 +1,4 @@
-from SilvaViridis.Python.Common.Types import PositiveInt
+from SilvaViridis.Python.Common.Numbers import PositiveInt
 
 from ...Common import DirectiveBase, Size, SizeUnit
 
@@ -9,7 +9,7 @@ class OutputBuffers(DirectiveBase):
         self,
         order : int,
         quantity : PositiveInt = 2,
-        size : Size = Size(32, SizeUnit.kilobytes),
+        size : Size = Size(value = 32, unit = SizeUnit.kilobytes),
     ):
         super().__init__(order, DIR_OUTPUT_BUFFERS)
         self.add_arg(quantity)

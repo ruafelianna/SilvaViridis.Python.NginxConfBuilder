@@ -1,6 +1,6 @@
 from collections.abc import Mapping
 
-from SilvaViridis.Python.Common.Types import NonEmptyString
+from SilvaViridis.Python.Common.Text import NonEmptyString
 from SilvaViridis.Python.Common.Web import MimeType
 
 from ...Common import DirectiveBase

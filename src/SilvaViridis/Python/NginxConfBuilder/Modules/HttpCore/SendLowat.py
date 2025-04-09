@@ -6,7 +6,7 @@ class SendLowat(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size: Size = Size(0),
+        size: Size = Size(value = 0),
     ):
         super().__init__(order, DIR_SEND_LOWAT)
         self.add_arg(size)

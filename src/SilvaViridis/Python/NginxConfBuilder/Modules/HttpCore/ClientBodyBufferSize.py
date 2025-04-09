@@ -6,7 +6,7 @@ class ClientBodyBufferSize(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size : Size = Size(16, SizeUnit.kilobytes),
+        size : Size = Size(value = 16, unit = SizeUnit.kilobytes),
     ):
         super().__init__(order, DIR_CLIENT_BODY_BUFFER_SIZE)
         self.add_arg(size)

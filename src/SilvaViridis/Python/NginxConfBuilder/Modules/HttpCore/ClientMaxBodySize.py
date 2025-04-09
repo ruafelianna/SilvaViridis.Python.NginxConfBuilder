@@ -6,7 +6,7 @@ class ClientMaxBodySize(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size : Size = Size(1, SizeUnit.megabytes),
+        size : Size = Size(value = 1, unit = SizeUnit.megabytes),
     ):
         super().__init__(order, DIR_CLIENT_MAX_BODY_SIZE)
         self.add_arg(size)

@@ -1,6 +1,6 @@
 from SilvaViridis.Python.Common.Enums import (
     OrderedEnum,
-    OrderedEnumDictComparator,
+    OrderedEnumDecorators,
 )
 
 from SilvaViridis.Python.Common.Interfaces import IComparable
@@ -26,4 +26,4 @@ _order : dict[TimeIntervalUnit, IComparable] = {
     TimeIntervalUnit.years: 7,
 }
 
-OrderedEnumDictComparator(_order)(TimeIntervalUnit)
+OrderedEnumDecorators.DictComparator(_order)(TimeIntervalUnit)

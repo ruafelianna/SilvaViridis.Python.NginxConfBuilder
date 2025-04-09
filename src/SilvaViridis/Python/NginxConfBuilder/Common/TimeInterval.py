@@ -1,12 +1,9 @@
+from pydantic import Field
+
 from SilvaViridis.Python.Common import ValueWithUnit
-from SilvaViridis.Python.Common.Types import NonNegativeInt
+from SilvaViridis.Python.Common.Numbers import NonNegativeInt
 
 from .TimeIntervalUnit import TimeIntervalUnit
 
-class TimeInterval(ValueWithUnit[int, TimeIntervalUnit]):
-    def __init__(
-        self,
-        value : NonNegativeInt,
-        unit : TimeIntervalUnit = TimeIntervalUnit.seconds,
-    ):
-        super().__init__(value, unit)
+class TimeInterval(ValueWithUnit[NonNegativeInt, TimeIntervalUnit]):
+    unit : TimeIntervalUnit = Field(default = TimeIntervalUnit.seconds)

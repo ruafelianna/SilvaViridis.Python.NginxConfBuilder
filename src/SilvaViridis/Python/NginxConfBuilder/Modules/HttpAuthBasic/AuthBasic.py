@@ -1,6 +1,6 @@
 from typing import Literal
 
-from SilvaViridis.Python.Common.Types import NonEmptyString
+from SilvaViridis.Python.Common.Text import NonEmptyString
 
 from ...Common import DirectiveBase, OnOff
 

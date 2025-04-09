@@ -1,4 +1,4 @@
-from SilvaViridis.Python.Common.Types import PositiveInt
+from SilvaViridis.Python.Common.Numbers import PositiveInt
 
 from ...Common import DirectiveBase
 

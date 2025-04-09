@@ -1,4 +1,4 @@
-from SilvaViridis.Python.Common.Types import PositiveInt
+from SilvaViridis.Python.Common.Numbers import PositiveInt
 
 from ...Common import DirectiveBase, Size, SizeUnit
 
@@ -9,7 +9,7 @@ class LargeClientHeaderBuffers(DirectiveBase):
         self,
         order : int,
         number : PositiveInt = 4,
-        size : Size = Size(8, SizeUnit.kilobytes),
+        size : Size = Size(value = 8, unit = SizeUnit.kilobytes),
     ):
         super().__init__(order, DIR_LARGE_CLIENT_HEADER_BUFFERS)
         self.add_arg(number)

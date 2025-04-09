@@ -1,12 +1,7 @@
 from SilvaViridis.Python.Common import ValueWithUnit
-from SilvaViridis.Python.Common.Types import NonNegativeInt
+from SilvaViridis.Python.Common.Numbers import NonNegativeInt
 
 from .OffsetUnit import OffsetUnit
 
-class Offset(ValueWithUnit[int, OffsetUnit]):
-    def __init__(
-        self,
-        value : NonNegativeInt,
-        unit : OffsetUnit,
-    ):
-        super().__init__(value, unit)
+class Offset(ValueWithUnit[NonNegativeInt, OffsetUnit]):
+    pass

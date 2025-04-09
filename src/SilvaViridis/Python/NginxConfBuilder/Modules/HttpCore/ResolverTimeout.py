@@ -6,7 +6,7 @@ class ResolverTimeout(DirectiveBase):
     def __init__(
         self,
         order : int,
-        time : TimeInterval | TimeIntervalGroup = TimeInterval(30),
+        time : TimeInterval | TimeIntervalGroup = TimeInterval(value = 30),
     ):
         super().__init__(order, DIR_RESOLVER_TIMEOUT)
         self.add_arg(time)

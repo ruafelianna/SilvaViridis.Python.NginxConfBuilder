@@ -1,7 +1,7 @@
 from typing import Literal
 
+from SilvaViridis.Python.Common.Numbers import PositiveInt, UInt16
 from SilvaViridis.Python.Common.Text import StringHelper as SH
-from SilvaViridis.Python.Common.Types import PositiveInt, UInt16
 
 from ...Common import DirectiveBase, OnOff, Path, Size, TimeInterval, TimeIntervalGroup
 

@@ -1,4 +1,4 @@
-from SilvaViridis.Python.Common.Types import NonEmptySequence
+from SilvaViridis.Python.Common.Collections import NonEmptySequence
 from SilvaViridis.Python.Common.Web import HttpStatus
 
 from ...Common import DirectiveBase, Path

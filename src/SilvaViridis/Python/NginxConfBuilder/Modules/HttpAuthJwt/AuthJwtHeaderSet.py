@@ -1,4 +1,5 @@
-from SilvaViridis.Python.Common.Types import NonEmptySequence, NonEmptyString
+from SilvaViridis.Python.Common.Collections import NonEmptySequence
+from SilvaViridis.Python.Common.Text import NonEmptyString
 
 from ...Common import DirectiveBase, Variable
 

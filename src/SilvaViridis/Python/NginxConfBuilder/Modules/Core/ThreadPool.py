@@ -1,7 +1,8 @@
 from beartype.vale import Is
 from typing import Annotated
 
-from SilvaViridis.Python.Common.Types import NonEmptyString, PositiveInt
+from SilvaViridis.Python.Common.Numbers import PositiveInt
+from SilvaViridis.Python.Common.Text import NonEmptyString
 
 from ...Common import DirectiveBase
 

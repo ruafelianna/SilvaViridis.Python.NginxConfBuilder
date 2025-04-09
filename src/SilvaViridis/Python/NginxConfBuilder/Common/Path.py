@@ -1,4 +1,4 @@
-from SilvaViridis.Python.Common.Types import NonEmptyString
+from SilvaViridis.Python.Common.Text import NonEmptyString
 
 class Path:
     def __init__(

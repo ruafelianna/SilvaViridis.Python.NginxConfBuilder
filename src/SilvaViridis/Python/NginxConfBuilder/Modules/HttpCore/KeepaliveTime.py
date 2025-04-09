@@ -6,7 +6,7 @@ class KeepaliveTime(DirectiveBase):
     def __init__(
         self,
         order : int,
-        time : TimeInterval | TimeIntervalGroup = TimeInterval(1, TimeIntervalUnit.hours),
+        time : TimeInterval | TimeIntervalGroup = TimeInterval(value = 1, unit = TimeIntervalUnit.hours),
     ):
         super().__init__(order, DIR_KEEPALIVE_TIME)
         self.add_arg(time)

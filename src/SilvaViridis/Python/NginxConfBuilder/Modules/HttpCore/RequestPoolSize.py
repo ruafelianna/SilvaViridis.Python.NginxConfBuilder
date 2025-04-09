@@ -6,7 +6,7 @@ class RequestPoolSize(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size: Size = Size(4, SizeUnit.kilobytes),
+        size: Size = Size(value = 4, unit = SizeUnit.kilobytes),
     ):
         super().__init__(order, DIR_REQUEST_POOL_SIZE)
         self.add_arg(size)

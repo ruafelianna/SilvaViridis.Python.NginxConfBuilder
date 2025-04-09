@@ -1,6 +1,6 @@
 from collections.abc import Sequence
 
-from SilvaViridis.Python.Common.Types import NonNegativeInt
+from SilvaViridis.Python.Common.Numbers import NonNegativeInt
 
 from .TimeInterval import TimeInterval
 from .TimeIntervalUnit import TimeIntervalUnit
@@ -17,7 +17,7 @@ class TimeIntervalGroup:
                 grouped[interval.unit] = []
             grouped[interval.unit].append(interval.value)
 
-        self.intervals = sorted([TimeInterval(sum(values), unit) for unit, values in grouped.items()], reverse = True)
+        self.intervals = sorted([TimeInterval(value = sum(values), unit = unit) for unit, values in grouped.items()], reverse = True)
 
     def __str__(
         self,

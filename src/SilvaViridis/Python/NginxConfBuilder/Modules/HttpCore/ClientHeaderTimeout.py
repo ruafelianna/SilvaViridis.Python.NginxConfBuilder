@@ -6,7 +6,7 @@ class ClientHeaderTimeout(DirectiveBase):
     def __init__(
         self,
         order : int,
-        time : TimeInterval | TimeIntervalGroup = TimeInterval(60),
+        time : TimeInterval | TimeIntervalGroup = TimeInterval(value = 60),
     ):
         super().__init__(order, DIR_CLIENT_HEADER_TIMEOUT)
         self.add_arg(time)

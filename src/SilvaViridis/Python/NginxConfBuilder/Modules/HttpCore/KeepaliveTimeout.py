@@ -6,7 +6,7 @@ class KeepaliveTimeout(DirectiveBase):
     def __init__(
         self,
         order : int,
-        time : TimeInterval | TimeIntervalGroup = TimeInterval(75),
+        time : TimeInterval | TimeIntervalGroup = TimeInterval(value = 75),
         header_time : TimeInterval | TimeIntervalGroup | None = None,
     ):
         super().__init__(order, DIR_KEEPALIVE_TIMEOUT)

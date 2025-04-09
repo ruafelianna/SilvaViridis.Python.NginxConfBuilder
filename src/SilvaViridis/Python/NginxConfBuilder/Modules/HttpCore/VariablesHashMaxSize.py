@@ -6,7 +6,7 @@ class VariablesHashMaxSize(DirectiveBase):
     def __init__(
         self,
         order : int,
-        size: Size = Size(1024),
+        size: Size = Size(value = 1024),
     ):
         super().__init__(order, DIR_VARIABLES_HASH_MAX_SIZE)
         self.add_arg(size)

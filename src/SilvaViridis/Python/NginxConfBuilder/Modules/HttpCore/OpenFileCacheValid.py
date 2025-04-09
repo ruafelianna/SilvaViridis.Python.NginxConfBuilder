@@ -6,7 +6,7 @@ class OpenFileCacheValid(DirectiveBase):
     def __init__(
         self,
         order : int,
-        time : TimeInterval | TimeIntervalGroup = TimeInterval(60),
+        time : TimeInterval | TimeIntervalGroup = TimeInterval(value = 60),
     ):
         super().__init__(order, DIR_OPEN_FILE_CACHE_VALID)
         self.add_arg(time)

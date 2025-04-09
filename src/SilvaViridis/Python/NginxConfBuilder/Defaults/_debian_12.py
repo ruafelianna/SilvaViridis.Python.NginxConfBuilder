@@ -84,7 +84,7 @@ def get_debian_12_default_conf(
             ),
             types_hash_max_size = TypesHashMaxSize(
                 order = 300,
-                size = Size(2048),
+                size = Size(value = 2048),
             ),
             include_list = [
                 Include(

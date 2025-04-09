@@ -1,6 +1,6 @@
 from collections.abc import Sequence
 
-from SilvaViridis.Python.Common.Types import NonEmptySequence
+from SilvaViridis.Python.Common.Collections import NonEmptySequence
 from SilvaViridis.Python.Common.Web import HttpMethod
 
 from ..HttpAccess import Allow, Deny
